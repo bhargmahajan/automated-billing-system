@@ -1,0 +1,66 @@
+<template>
+    <div class="layout">
+        <div class="leftSidebar">
+            <lightning-input
+                    class="searchInput"
+                    type="search"
+                    label="Search menu"
+                    value={searchTerm}
+                    onchange={handleSearchChange}
+                    placeholder="Enter account name">
+            </lightning-input>
+
+            <lightning-card title="Accounts" icon-name="standard:account">
+                <template if:true={error}>
+                    <div class="slds-text-color_error slds-p-around_medium">
+                        Error loading accounts: {error.body.message}
+                    </div>
+                </template>
+            
+                <template if:true={accounts.length}>
+                    <div class="slds-p-around_medium">
+                        <template for:each={accounts} for:item="account">
+                            <div key={account.Id} class="slds-box slds-m-bottom_small">
+                                <p><strong>{account.Name}</strong></p>
+                                <p>Account Number: {account.AccountNumber}</p>
+                                <p>Phone: {account.Phone}</p>
+                                <p>Type: {account.Type}</p>
+                                <p>Industry: {account.Industry}</p>
+                            </div>
+                        </template>
+                    </div>
+            
+                    <template if:false={allLoaded}>
+                        <div class="slds-p-around_medium">
+                            <template if:true={loading}>
+                                <lightning-spinner alternative-text="Loading accounts" size="medium"></lightning-spinner>
+                            </template>
+            
+                            <template if:false={loading}>
+                                <lightning-button label="Load More" onclick={handleLoadMore}></lightning-button>
+                            </template>
+                        </div>
+                    </template>
+            
+                    <template if:true={allLoaded}>
+                        <div class="slds-p-around_medium">All accounts loaded.</div>
+                    </template>
+                </template>
+            
+                <template if:true={noAccounts}>
+                    <div class="slds-p-around_medium">
+                        <template if:true={loading}>
+                            Loading accounts...
+                        </template>
+                        <template if:false={loading}>
+                            No accounts found.
+                        </template>
+                    </div>
+                </template>
+            </lightning-card>
+        </div>
+
+            <div class="rightSidebar">
+             </div>
+        </div>
+</template>

@@ -152,15 +152,15 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ControlledByParent</externalSharingModel>
-    <label>Order Invoice</label>
+    <externalSharingModel>Private</externalSharingModel>
+    <label>Invoice</label>
     <nameField>
-        <displayFormat>OI-{0}</displayFormat>
-        <label>Order Invoice ID</label>
+        <displayFormat>IN{0}</displayFormat>
+        <label>Invoice number</label>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Order Invoices</pluralLabel>
+    <pluralLabel>Invoices</pluralLabel>
     <searchLayouts></searchLayouts>
-    <sharingModel>ControlledByParent</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

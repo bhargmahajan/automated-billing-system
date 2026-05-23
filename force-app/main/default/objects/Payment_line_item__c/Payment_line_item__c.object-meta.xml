@@ -153,13 +153,13 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
-    <label>Order Invoice</label>
+    <label>Payment line item</label>
     <nameField>
-        <displayFormat>OI-{0}</displayFormat>
-        <label>Order Invoice ID</label>
+        <displayFormat>PLI{0}</displayFormat>
+        <label>Payment line item ID</label>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Order Invoices</pluralLabel>
+    <pluralLabel>Payment line items</pluralLabel>
     <searchLayouts></searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
