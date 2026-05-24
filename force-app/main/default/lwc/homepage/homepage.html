@@ -2,17 +2,17 @@
     <div class="layout">
         <div class="leftSidebar">
             <lightning-input
-                    class="searchInput"
-                    type="search"
-                    label="Search menu"
-                    value={searchTerm}
-                    onchange={handleSearchChange}
-                    placeholder="Enter account name">
+                class="searchInput"
+                type="search"
+                value={searchTerm}
+                onchange={handleSearchChange}
+                onkeyup={handleSearchChange}
+                placeholder="Enter account name">
             </lightning-input>
 
             <lightning-card title="Accounts" icon-name="standard:account">
                 <template if:true={error}>
-                    <div class="slds-text-color_error slds-p-around_medium">
+                    <div class="slds-text-color_error slds-p-around_medium centered-content">
                         Error loading accounts: {error.body.message}
                     </div>
                 </template>
@@ -20,18 +20,19 @@
                 <template if:true={accounts.length}>
                     <div class="slds-p-around_medium">
                         <template for:each={accounts} for:item="account">
-                            <div key={account.Id} class="slds-box slds-m-bottom_small">
+                            <div 
+                                key={account.Id} 
+                                class={account.cssClass}
+                                data-account-id={account.Id}
+                                onclick={handleSelectAccount}>
                                 <p><strong>{account.Name}</strong></p>
-                                <p>Account Number: {account.AccountNumber}</p>
-                                <p>Phone: {account.Phone}</p>
-                                <p>Type: {account.Type}</p>
-                                <p>Industry: {account.Industry}</p>
+                                <p>{account.Email__c}</p>
                             </div>
                         </template>
                     </div>
             
                     <template if:false={allLoaded}>
-                        <div class="slds-p-around_medium">
+                        <div class="slds-p-around_medium centered-content">
                             <template if:true={loading}>
                                 <lightning-spinner alternative-text="Loading accounts" size="medium"></lightning-spinner>
                             </template>
@@ -42,13 +43,15 @@
                         </div>
                     </template>
             
-                    <template if:true={allLoaded}>
-                        <div class="slds-p-around_medium">All accounts loaded.</div>
+                    <template if:true={showAllAccountsLoaded}>
+                        <div class="slds-p-around_medium centered-content">
+                            All accounts loaded.
+                        </div>
                     </template>
                 </template>
             
                 <template if:true={noAccounts}>
-                    <div class="slds-p-around_medium">
+                    <div class="slds-p-around_medium centered-content">
                         <template if:true={loading}>
                             Loading accounts...
                         </template>
@@ -60,7 +63,125 @@
             </lightning-card>
         </div>
 
-            <div class="rightSidebar">
-             </div>
+        <div class="rightSidebar">
+            <template if:false={selectedAccount}>
+                <div class="slds-p-around_medium centered-content" style="min-height: 200px;">
+                    <p>Select an account to view details</p>
+                </div>
+            </template>
+
+            <template if:true={selectedAccount}>
+                <lightning-accordion active-section-name={activeSections} onsectiontoggle={handleSectionToggle}>
+                    <lightning-accordion-section name="accountDetails" label="Account Details">
+                        <template if:true={selectedAccount}>
+                            <div class="slds-p-around_medium">
+                                <div class="detail-row">
+                                    <span class="detail-label">Name:</span>
+                                    <span class="detail-value">{selectedAccount.Name}</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Email:</span>
+                                    <span class="detail-value">{selectedAccount.Email__c}</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Phone:</span>
+                                    <span class="detail-value">{selectedAccount.Phone}</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Website:</span>
+                                    <span class="detail-value">{selectedAccount.Website}</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Industry:</span>
+                                    <span class="detail-value">{selectedAccount.Industry}</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Type:</span>
+                                    <span class="detail-value">{selectedAccount.Type}</span>
+                                </div>
+                            </div>
+                        </template>
+                    </lightning-accordion-section>
+    
+                    <lightning-accordion-section name="loyalty" label="Loyalty Points">
+                        <template if:true={selectedAccount}>
+                            <div class="slds-p-around_medium">
+                                <div class="detail-row">
+                                    <span class="detail-label">Total Earned:</span>
+                                    <span class="detail-value">{loyaltySummary.totalEarned}</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Total Redeemed:</span>
+                                    <span class="detail-value">{loyaltySummary.totalRedeemed}</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Available:</span>
+                                    <span class="detail-value">{loyaltySummary.available}</span>
+                                </div>
+    
+                                <h3>Loyalty Transactions</h3>
+                                <div>
+                                    <template if:true={transactions.length}>
+                                        <template for:each={transactions} for:item="tx">
+                                            <div key={tx.Id} class="transaction-item slds-box slds-m-bottom_x-small">
+                                                <div class="detail-row">
+                                                    <span class="detail-label">Type:</span>
+                                                    <span class="detail-value">{tx.Transaction_Type__c}</span>
+                                                </div>
+                                                <div class="detail-row">
+                                                    <span class="detail-label">Points:</span>
+                                                    <span class="detail-value">{tx.Points__c}</span>
+                                                </div>
+                                                <div class="detail-row">
+                                                    <span class="detail-label">Date:</span>
+                                                    <span class="detail-value">{tx.CreatedDate}</span>
+                                                </div>
+                                                <div class="detail-row">
+                                                    <span class="detail-label">Desc:</span>
+                                                    <span class="detail-value">{tx.Description__c}</span>
+                                                </div>
+                                            </div>
+                                        </template>
+                                    </template>
+    
+                                    <template if:false={transactions.length}>
+                                        <div class="slds-p-around_medium centered-content">
+                                            <template if:true={txLoading}>
+                                                Loading transactions...
+                                            </template>
+                                            <template if:false={txLoading}>
+                                                No transactions found.
+                                            </template>
+                                        </div>
+                                    </template>
+    
+                                    <template if:false={txAllLoaded}>
+                                        <div class="slds-p-around_medium centered-content">
+                                            <template if:true={txLoading}>
+                                                <lightning-spinner alternative-text="Loading transactions" size="small"></lightning-spinner>
+                                            </template>
+                                            <template if:false={txLoading}>
+                                                <lightning-button label="Load More" onclick={handleLoadMoreTransactions}></lightning-button>
+                                            </template>
+                                        </div>
+                                    </template>
+    
+                                    <template if:true={showAllTransactionsLoaded}>
+                                        <div class="slds-p-around_medium centered-content">All transactions loaded.</div>
+                                    </template>
+                                </div>
+                            </div>
+                        </template>
+                        <template if:false={selectedAccount}>
+                            <div class="slds-p-around_medium centered-content" style="min-height: 200px;">
+                                <p>Select an account to view loyalty details</p>
+                            </div>
+                        </template>
+                    </lightning-accordion-section>
+                </lightning-accordion>
+            </template>
+            
+            
         </div>
+    </div>
 </template>
