@@ -148,7 +148,22 @@ export default class Homepage extends LightningElement {
             offset: this.txOffset
         }).then(res => {
             if (res && res.length) {
-                this.transactions = [...this.transactions, ...res];
+                const mappedTx = res.map(tx => {
+                    let pointsStyle = '';
+                    let displayPoints = '';
+                    const type = tx.Transaction_Type__c ? tx.Transaction_Type__c.trim().toLowerCase() : '';
+                    const absPoints = Math.abs(tx.Points__c || 0);
+
+                    if (type === 'earned') {
+                        pointsStyle = 'color: #027e46; font-weight: 600;'; // SLDS Green
+                        displayPoints = `+${absPoints}`;
+                    } else {
+                        pointsStyle = 'color: #ea001e; font-weight: 600;'; // SLDS Red
+                        displayPoints = `-${absPoints}`;
+                    }
+                    return { ...tx, pointsStyle, displayPoints };
+                });
+                this.transactions = [...this.transactions, ...mappedTx];
                 this.txOffset += this.txBatchSize;
                 if (res.length < this.txBatchSize) this.txAllLoaded = true;
             } else {

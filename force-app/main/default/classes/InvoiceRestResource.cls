@@ -83,9 +83,9 @@ global with sharing class InvoiceRestResource {
                 Account__c = reqItem.AccountId,
                 External_ID__c = reqItem.ExternalID,
                 Coupon_Code__c = reqItem.CouponCode,
-                Status__c = reqItem.Status,
+                Status__c = 'Draft',
                 Amount_Generated__c = generatedAmount,
-                Final_Amount__c = finalAmount
+                Discount__c = reqItem.DiscountPercentage
             );
             invoicesToInsert.add(inv);
             validRequests.add(reqItem);
@@ -93,7 +93,6 @@ global with sharing class InvoiceRestResource {
         }
 
         if (!invoicesToInsert.isEmpty()) {
-            // Allow partial success
             Database.SaveResult[] saveResults = Database.insert(invoicesToInsert, false);
 
             for (Integer i = 0; i < saveResults.size(); i++) {

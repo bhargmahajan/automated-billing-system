@@ -11,19 +11,26 @@ p {
 .layout {
     display: flex;
     gap: 1rem;
+    height: calc(100vh - 170px);
+    overflow: hidden;
 }
 
 .leftSidebar {
     width: 25%;
     background-color: #ffffff;
     padding: 1rem;
+    border-radius: 2%;
+    overflow-y: auto;
+    border-right: 1px solid #dddbda;
 }
 
 .rightSidebar {
     width: 75%;
     background-color: #ffffff;
     padding: 1rem;
+    border-radius: 2%;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    overflow-y: auto;
 }
 
 .searchInput {

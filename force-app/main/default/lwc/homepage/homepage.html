@@ -122,26 +122,36 @@
                                 <h3>Loyalty Transactions</h3>
                                 <div>
                                     <template if:true={transactions.length}>
-                                        <template for:each={transactions} for:item="tx">
-                                            <div key={tx.Id} class="transaction-item slds-box slds-m-bottom_x-small">
-                                                <div class="detail-row">
-                                                    <span class="detail-label">Type:</span>
-                                                    <span class="detail-value">{tx.Transaction_Type__c}</span>
-                                                </div>
-                                                <div class="detail-row">
-                                                    <span class="detail-label">Points:</span>
-                                                    <span class="detail-value">{tx.Points__c}</span>
-                                                </div>
-                                                <div class="detail-row">
-                                                    <span class="detail-label">Date:</span>
-                                                    <span class="detail-value">{tx.CreatedDate}</span>
-                                                </div>
-                                                <div class="detail-row">
-                                                    <span class="detail-label">Desc:</span>
-                                                    <span class="detail-value">{tx.Description__c}</span>
-                                                </div>
-                                            </div>
-                                        </template>
+                                        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped slds-m-top_small">
+                                            <thead>
+                                                <tr class="slds-line-height_reset">
+                                                    <th scope="col"><div class="slds-truncate" title="Type">Type</div></th>
+                                                    <th scope="col"><div class="slds-truncate" title="Points">Points</div></th>
+                                                    <th scope="col"><div class="slds-truncate" title="Date">Date</div></th>
+                                                    <th scope="col"><div class="slds-truncate" title="Description">Description</div></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <template for:each={transactions} for:item="tx">
+                                                    <tr key={tx.Id} class="slds-hint-parent">
+                                                        <td data-label="Type">
+                                                            <div class="slds-truncate">{tx.Transaction_Type__c}</div>
+                                                        </td>
+                                                        <td data-label="Points">
+                                                            <div class="slds-truncate" style={tx.pointsStyle}>{tx.displayPoints}</div>
+                                                        </td>
+                                                        <td data-label="Date">
+                                                            <div class="slds-truncate">
+                                                                <lightning-formatted-date-time value={tx.CreatedDate} year="numeric" month="short" day="2-digit" hour="2-digit" minute="2-digit"></lightning-formatted-date-time>
+                                                            </div>
+                                                        </td>
+                                                        <td data-label="Description">
+                                                            <div class="slds-truncate" title={tx.Description__c}>{tx.Description__c}</div>
+                                                        </td>
+                                                    </tr>
+                                                </template>
+                                            </tbody>
+                                        </table>
                                     </template>
     
                                     <template if:false={transactions.length}>
