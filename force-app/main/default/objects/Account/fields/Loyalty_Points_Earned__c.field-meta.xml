@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loyalty_Points_Earned__c</fullName>
+    <label>Loyalty Points Earned</label>
+    <summarizedField>Loyalty_Ledger__c.Points__c</summarizedField>
+    <summaryFilterItems>
+        <field>Loyalty_Ledger__c.Transaction_Type__c</field>
+        <operation>equals</operation>
+        <value>Earned</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Loyalty_Ledger__c.Account__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <type>Summary</type>
+</CustomField>

@@ -63,6 +63,7 @@ global with sharing class InvoiceRestResource {
         List<InvoiceRequest> validRequests = new List<InvoiceRequest>();
         List<RecordResult> validResults = new List<RecordResult>();
         List<Order_Invoice__c> orderItemsToInsert = new List<Order_Invoice__c>();
+        List<Id> successfulInvoiceIds = new List<Id>();
 
         for (InvoiceRequest reqItem : incomingRequests) {
             RecordResult resultItem = new RecordResult();
@@ -70,14 +71,6 @@ global with sharing class InvoiceRestResource {
             
             Decimal generatedAmount = reqItem.GeneratedAmount;
             Decimal finalAmount = generatedAmount;
-
-            if (reqItem.DiscountPercentage != null && reqItem.DiscountPercentage > 0) {
-                Decimal discountAmount = (generatedAmount * reqItem.DiscountPercentage) / 100;
-                finalAmount = generatedAmount - discountAmount;
-                if (finalAmount < 0) {
-                    finalAmount = 0;
-                }
-            }
 
             Invoice__c inv = new Invoice__c(
                 Account__c = reqItem.AccountId,
@@ -105,6 +98,7 @@ global with sharing class InvoiceRestResource {
                     resultItem.statusCode = 201;
                     resultItem.status = 'Success';
                     resultItem.message = 'Invoice created successfully. Id: ' + sr.getId();
+                    successfulInvoiceIds.add(sr.getId());
 
                     // 2. Prepare child Order Invoice Items for successfully created Invoices
                     if (originalRequestData.Orders != null && !originalRequestData.Orders.isEmpty()) {
@@ -134,6 +128,12 @@ global with sharing class InvoiceRestResource {
             // 3. Insert child Order Invoice Items if any are present
             if (!orderItemsToInsert.isEmpty()) {
                 Database.insert(orderItemsToInsert, false);
+            }
+
+            // 4. Enqueue Batch job to generate Stripe Payment Links
+            // Using a batch size of 50 to safely stay under the 100 callout limit per transaction execution
+            if (!successfulInvoiceIds.isEmpty()) {
+                Database.executeBatch(new StripePaymentBatch(successfulInvoiceIds), 50);
             }
         }
 

@@ -58,7 +58,15 @@ export default class Homepage extends LightningElement {
         }).then((result) => {
                 if (result && result.length) {
                     // attach cssClass for template binding
-                    const mapped = result.map(acc => ({ ...acc, cssClass: this.getAccountClass(acc.Id) }));
+                    const mapped = result.map(acc => {
+                        const earned = acc.Loyalty_Points_Earned__c || 0;
+                        const redeemed = acc.Loyalty_Points_Redeemed__c || 0;
+                        return { 
+                            ...acc, 
+                            remainingPoints: earned - redeemed,
+                            cssClass: this.getAccountClass(acc.Id) 
+                        };
+                    });
                     this.accounts = [...this.accounts, ...mapped];
                     this.offset += this.batchSize;
 

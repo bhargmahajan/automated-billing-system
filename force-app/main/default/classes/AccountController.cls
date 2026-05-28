@@ -12,7 +12,7 @@ public with sharing class AccountController {
         // If no search term, return all accounts; otherwise filter by name
         if (String.isBlank(searchTerm)) {
             return [
-                SELECT Id, Name, Email__c
+                SELECT Id, Name, Email__c, Loyalty_Points_Earned__c, Loyalty_Points_Redeemed__c
                 FROM Account
                 ORDER BY Name ASC
                 LIMIT :limitSize
@@ -21,7 +21,7 @@ public with sharing class AccountController {
         } 
             String searchPattern = '%' + searchTerm + '%';
             return [
-                SELECT Id, Name, Email__c
+                SELECT Id, Name, Email__c, Loyalty_Points_Earned__c, Loyalty_Points_Redeemed__c
                 FROM Account
                 WHERE Name LIKE :searchPattern
                 ORDER BY Name ASC
