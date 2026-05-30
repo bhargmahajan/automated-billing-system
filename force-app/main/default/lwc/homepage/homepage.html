@@ -25,8 +25,12 @@
                                 class={account.cssClass}
                                 data-account-id={account.Id}
                                 onclick={handleSelectAccount}>
-                                <p><strong>{account.Name}</strong></p>
-                                <p>{account.Email__c}</p>
+                                <div class="slds-media slds-media_center">
+                                    <div class="slds-media__body">
+                                        <p><strong>{account.Name}</strong></p>
+                                        <p>{account.Email__c}</p>
+                                    </div>
+                                </div>
                             </div>
                         </template>
                     </div>
@@ -71,44 +75,50 @@
             </template>
 
             <template if:true={selectedAccount}>
+                <div class="slds-box slds-theme_default slds-m-bottom_medium">
+                    <div class="slds-media slds-media_center slds-m-bottom_small">
+                        <div class="slds-media__figure">
+                            <lightning-icon icon-name="standard:account" size="large"></lightning-icon>
+                        </div>
+                        <div class="slds-media__body">
+                            <h2 class="slds-text-heading_large"><strong>{selectedAccount.Name}</strong></h2>
+                        </div>
+                    </div>
+                    
+                    <div class="slds-p-around_none slds-grid slds-wrap">
+                        <div class="detail-row slds-col slds-size_1-of-2">
+                            <p><strong>Email: </strong>{selectedAccount.Email__c}</p>
+                        </div>
+                        <div class="detail-row slds-col slds-size_1-of-2">
+                            <p><strong>Phone: </strong>{selectedAccount.Phone}</p>
+                        </div>
+                    </div>
+                </div>
+
                 <lightning-accordion active-section-name={activeSections} onsectiontoggle={handleSectionToggle}>
-                    <lightning-accordion-section name="accountDetails" label="Account Details">
-                        <template if:true={selectedAccount}>
-                            <div class="slds-p-around_medium">
-                                <div class="detail-row">
-                                    <span class="detail-label">Name:</span>
-                                    <span class="detail-value">{selectedAccount.Name}</span>
-                                </div>
-                                <div class="detail-row">
-                                    <span class="detail-label">Email:</span>
-                                    <span class="detail-value">{selectedAccount.Email__c}</span>
-                                </div>
-                                <div class="detail-row">
-                                    <span class="detail-label">Phone:</span>
-                                    <span class="detail-value">{selectedAccount.Phone}</span>
-                                </div>
-                                <div class="detail-row">
-                                    <span class="detail-label">Website:</span>
-                                    <span class="detail-value">{selectedAccount.Website}</span>
-                                </div>
-                            </div>
-                        </template>
-                    </lightning-accordion-section>
     
                     <lightning-accordion-section name="loyalty" label="Loyalty Points">
                         <template if:true={selectedAccount}>
                             <div class="slds-p-around_medium">
-                                <div class="detail-row">
-                                    <span class="detail-label">Total Earned:</span>
-                                    <span class="detail-value">{selectedAccount.Loyalty_Points_Earned__c}</span>
-                                </div>
-                                <div class="detail-row">
-                                    <span class="detail-label">Total Redeemed:</span>
-                                    <span class="detail-value">{selectedAccount.Loyalty_Points_Redeemed__c}</span>
-                                </div>
-                                <div class="detail-row">
-                                    <span class="detail-label">Available:</span>
-                                    <span class="detail-value">{selectedAccount.remainingPoints}</span>
+                                <div class="slds-grid slds-gutters slds-m-bottom_medium">
+                                    <div class="slds-col slds-size_1-of-3">
+                                        <div class="slds-box slds-text-align_center slds-theme_default">
+                                            <div class="slds-text-title_caps slds-text-color_weak slds-m-bottom_xx-small">Total Earned</div>
+                                            <div class="slds-text-heading_small" style="color: #027e46;"><strong>{selectedAccount.Loyalty_Points_Earned__c}</strong></div>
+                                        </div>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-3">
+                                        <div class="slds-box slds-text-align_center slds-theme_default">
+                                            <div class="slds-text-title_caps slds-text-color_weak slds-m-bottom_xx-small">Total Redeemed</div>
+                                            <div class="slds-text-heading_small" style="color: #ea001e;"><strong>{selectedAccount.Loyalty_Points_Redeemed__c}</strong></div>
+                                        </div>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-3">
+                                        <div class="slds-box slds-text-align_center slds-theme_default">
+                                            <div class="slds-text-title_caps slds-text-color_weak slds-m-bottom_xx-small">Available</div>
+                                            <div class="slds-text-heading_small"><strong>{selectedAccount.remainingPoints}</strong></div>
+                                        </div>
+                                    </div>
                                 </div>
     
                                 <h3>Loyalty Transactions</h3>
@@ -177,6 +187,14 @@
                         <template if:false={selectedAccount}>
                             <div class="slds-p-around_medium centered-content" style="min-height: 200px;">
                                 <p>Select an account to view loyalty details</p>
+                            </div>
+                        </template>
+                    </lightning-accordion-section>
+
+                    <lightning-accordion-section name="payments" label="Payments">
+                        <template if:true={selectedAccount}>
+                            <div class="slds-p-around_medium centered-content">
+                                <p>Payments information will appear here.</p>
                             </div>
                         </template>
                     </lightning-accordion-section>

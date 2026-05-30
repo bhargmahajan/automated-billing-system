@@ -12,7 +12,7 @@ export default class Homepage extends LightningElement {
     allLoaded = false;
     batchSize = 170;
     offset = 0;
-    activeSections = ['accountDetails', 'loyalty'];
+    activeSections = ['loyalty', 'payments'];
 
     // Loyalty transactions state
     loyaltySummary = { totalEarned: 0, totalRedeemed: 0, available: 0 };
