@@ -4,13 +4,14 @@
             <lightning-input
                 class="searchInput"
                 type="search"
+                label="Search Accounts"
                 value={searchTerm}
                 onchange={handleSearchChange}
                 onkeyup={handleSearchChange}
                 placeholder="Enter account name">
             </lightning-input>
 
-            <lightning-card title="Accounts" icon-name="standard:account">
+            <lightning-card>
                 <template if:true={error}>
                     <div class="slds-text-color_error slds-p-around_medium centered-content">
                         Error loading accounts: {error.body.message}
@@ -18,7 +19,7 @@
                 </template>
             
                 <template if:true={accounts.length}>
-                    <div class="slds-p-around_medium">
+                    <div class="slds-p-around_medium account-list">
                         <template for:each={accounts} for:item="account">
                             <div 
                                 key={account.Id} 

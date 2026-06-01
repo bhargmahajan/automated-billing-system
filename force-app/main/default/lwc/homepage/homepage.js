@@ -1,7 +1,7 @@
 import { LightningElement } from 'lwc';
-import getAccountsBatch from '@salesforce/apex/AccountController.getAccountsBatch';
-import getLoyaltySummary from '@salesforce/apex/AccountController.getLoyaltySummary';
-import getLoyaltyTransactions from '@salesforce/apex/AccountController.getLoyaltyTransactions';
+import getAccountsBatch from '@salesforce/apex/ApexController.getAccountsBatch';
+import getLoyaltySummary from '@salesforce/apex/ApexController.getLoyaltySummary';
+import getLoyaltyTransactions from '@salesforce/apex/ApexController.getLoyaltyTransactions';
 
 export default class Homepage extends LightningElement {
     searchTerm = '';
@@ -10,7 +10,7 @@ export default class Homepage extends LightningElement {
     error;
     loading = false;
     allLoaded = false;
-    batchSize = 170;
+    batchSize = 190;
     offset = 0;
     activeSections = ['loyalty', 'payments'];
 
@@ -26,25 +26,6 @@ export default class Homepage extends LightningElement {
         this.loadAccounts();
     }
 
-    handleSectionToggle(event) {
-        this.activeSections = event.detail.openSections;
-    }
-
-    handleSearchChange(event) {
-        this.searchTerm = event.target.value.trim();
-        this.resetPagination();
-        this.selectedAccount = null;
-        this.clearLoyaltyState();
-        this.loadAccounts();
-    }
-
-    resetPagination() {
-        this.accounts = [];
-        this.offset = 0;
-        this.allLoaded = false;
-        this.error = undefined;
-    }
-
     loadAccounts() {
         if (this.loading || this.allLoaded) {
             return;
@@ -57,7 +38,6 @@ export default class Homepage extends LightningElement {
             offset: this.offset
         }).then((result) => {
                 if (result && result.length) {
-                    // attach cssClass for template binding
                     const mapped = result.map(acc => {
                         const earned = acc.Loyalty_Points_Earned__c || 0;
                         const redeemed = acc.Loyalty_Points_Redeemed__c || 0;
@@ -86,6 +66,32 @@ export default class Homepage extends LightningElement {
             });
     }
 
+    getAccountClass(accountId) {
+        const baseClass = 'slds-box slds-m-bottom_small account-item';
+        return this.selectedAccount && this.selectedAccount.Id === accountId
+            ? `${baseClass} selected`
+            : baseClass;
+    }
+
+    handleSearchChange(event) {
+        this.searchTerm = event.target.value.trim();
+        this.resetPagination();
+        this.selectedAccount = null;
+        this.clearLoyaltyState();
+        this.loadAccounts();
+    }
+
+    resetPagination() {
+        this.accounts = [];
+        this.offset = 0;
+        this.allLoaded = false;
+        this.error = undefined;
+    }
+
+    handleSectionToggle(event) {
+        this.activeSections = event.detail.openSections;
+    }
+
     handleLoadMore() {
         this.loadAccounts();
     }
@@ -105,13 +111,6 @@ export default class Homepage extends LightningElement {
         }
 
         this.updateAccountClasses();
-    }
-
-    getAccountClass(accountId) {
-        const baseClass = 'slds-box slds-m-bottom_small account-item';
-        return this.selectedAccount && this.selectedAccount.Id === accountId
-            ? `${baseClass} selected`
-            : baseClass;
     }
 
     updateAccountClasses() {

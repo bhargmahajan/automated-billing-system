@@ -15,9 +15,9 @@
                 <label>Earned</label>
             </value>
             <value>
-                <fullName>Returned</fullName>
+                <fullName>Redeemed</fullName>
                 <default>false</default>
-                <label>Returned</label>
+                <label>Redeemed</label>
             </value>
         </valueSetDefinition>
     </valueSet>
