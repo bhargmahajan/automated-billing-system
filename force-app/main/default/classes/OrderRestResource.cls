@@ -22,13 +22,13 @@ global with sharing class OrderRestResource {
 
     global class RecordResult {
         global Boolean success;
-        global Id accountId;
+        global Id orderId;
         global Integer recordIndex;
         global List<String> errors;
         
-        global RecordResult(Boolean success, Id accountId, Integer recordIndex, List<String> errors) {
+        global RecordResult(Boolean success, Id orderId, Integer recordIndex, List<String> errors) {
             this.success = success;
-            this.accountId = accountId;
+            this.orderId = orderId;
             this.recordIndex = recordIndex;
             this.errors = errors;
         }
@@ -51,33 +51,96 @@ global with sharing class OrderRestResource {
             }
 
             String requestBody = req.requestBody.toString();
-            List<Order> orders = (List<Order>) JSON.deserialize(requestBody, List<Order>.class);
             
-            if (orders == null || orders.isEmpty()) {
+            Object untypedReq = JSON.deserializeUntyped(requestBody);
+            List<Object> rawOrders;
+            
+            if (untypedReq instanceof List<Object>) {
+                rawOrders = (List<Object>) untypedReq;
+            } else if (untypedReq instanceof Map<String, Object>) {
+                Map<String, Object> reqMap = (Map<String, Object>) untypedReq;
+                rawOrders = new List<Object>{ reqMap };
+            } else {
+                res.statusCode = 400;
+                return new ResponseWrapper(400, false, 'Invalid Request: Expected an array or object.', 0, 0, 0, new List<RecordResult>());
+            }
+            
+            if (rawOrders == null || rawOrders.isEmpty()) {
                 res.statusCode = 400;
                 return new ResponseWrapper(400, false, 'Invalid Request: Order array is empty.', 0, 0, 0, new List<RecordResult>());
             }
             
+            List<Order> orders = new List<Order>();
+            Map<Integer, List<OrderItem>> orderItemsByOrderIndex = new Map<Integer, List<OrderItem>>();
+            
+            for (Integer i = 0; i < rawOrders.size(); i++) {
+                Map<String, Object> rawOrderMap = (Map<String, Object>) rawOrders[i];
+                if (rawOrderMap.containsKey('Order Products')) {
+                    List<Object> rawItems = (List<Object>) rawOrderMap.get('Order Products');
+                    if (rawItems != null) {
+                        String cleanItemsJson = JSON.serialize(rawItems);
+                        List<OrderItem> items = (List<OrderItem>) JSON.deserialize(cleanItemsJson, List<OrderItem>.class);
+                        orderItemsByOrderIndex.put(i, items);
+                    }
+                    rawOrderMap.remove('Order Products');
+                }
+                
+                String cleanOrderJson = JSON.serialize(rawOrderMap);
+                Order ord = (Order) JSON.deserialize(cleanOrderJson, Order.class);
+                orders.add(ord);
+            }
+            
             Integer totalRecords = orders.size();
-            Integer successCount = 0;
-            Integer failureCount = 0;
             List<RecordResult> recordResults = new List<RecordResult>();
             
             Database.SaveResult[] results = Database.insert(orders, false);
+            List<OrderItem> allItemsToInsert = new List<OrderItem>();
+            Map<Integer, Integer> itemIndexToOrderIndex = new Map<Integer, Integer>();
+            
             for (Integer i = 0; i < results.size(); i++) {
                 Database.SaveResult sr = results[i];
                 List<String> errors = new List<String>();
                 
                 if (sr.isSuccess()) {
-                    successCount++;
+                    if (orderItemsByOrderIndex.containsKey(i) && !orderItemsByOrderIndex.get(i).isEmpty()) {
+                        for (OrderItem oi : orderItemsByOrderIndex.get(i)) {
+                            oi.OrderId = sr.getId();
+                            itemIndexToOrderIndex.put(allItemsToInsert.size(), i);
+                            allItemsToInsert.add(oi);
+                        }
+                    }
                 } else {
-                    failureCount++;
                     for (Database.Error err : sr.getErrors()) {
-                        errors.add(err.getMessage());
+                        errors.add('Order Error: ' + err.getMessage());
                     }
                 }
                 
                 recordResults.add(new RecordResult(sr.isSuccess(), sr.getId(), i, errors));
+            }
+            
+            if (!allItemsToInsert.isEmpty()) {
+                Database.SaveResult[] itemResults = Database.insert(allItemsToInsert, false);
+                for (Integer j = 0; j < itemResults.size(); j++) {
+                    Database.SaveResult itemSr = itemResults[j];
+                    if (!itemSr.isSuccess()) {
+                        Integer parentOrderIndex = itemIndexToOrderIndex.get(j);
+                        RecordResult rr = recordResults[parentOrderIndex];
+                        for (Database.Error err : itemSr.getErrors()) {
+                            rr.errors.add('Order Product Error: ' + err.getMessage());
+                        }
+                        rr.success = false;
+                    }
+                }
+            }
+            
+            Integer successCount = 0;
+            Integer failureCount = 0;
+            for (RecordResult rr : recordResults) {
+                if (rr.success) {
+                    successCount++;
+                } else {
+                    failureCount++;
+                }
             }
             
             Boolean isSuccess = (failureCount == 0);
