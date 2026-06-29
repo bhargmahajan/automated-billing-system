@@ -11,6 +11,7 @@ public class OrderTriggerHelper {
         }
         
         if (!ordersToProcess.isEmpty()) {
+            Database.executeBatch(new InvoiceCreation(ordersToProcess));
         }
     }
 }
