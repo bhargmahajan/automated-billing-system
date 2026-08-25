@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Pricebook_Required</fullName>
-    <active>true</active>
-    <errorConditionFormula>Pricebook2Id   =  Null</errorConditionFormula>
-    <errorDisplayField>Pricebook2Id</errorDisplayField>
-    <errorMessage>Required field missing: Pricebook required.</errorMessage>
-</ValidationRule>
