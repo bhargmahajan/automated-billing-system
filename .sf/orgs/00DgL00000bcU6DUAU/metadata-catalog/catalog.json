@@ -1,11 +1,1259 @@
 {
   "version": 2,
   "orgId": "00DgL00000bcU6DUAU",
-  "writtenAt": "2026-08-25T15:55:04.473Z",
-  "generation": 78,
+  "writtenAt": "2026-10-09T15:06:31.568Z",
+  "generation": 186,
   "inventory": [],
   "sobjects": {
-    "descriptions": []
+    "descriptions": [
+      {
+        "name": "Tax_Rate_Rule__mdt",
+        "label": "Tax Rate Rule",
+        "custom": true,
+        "queryable": true,
+        "fields": [
+          {
+            "aggregatable": false,
+            "custom": false,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": true,
+            "inlineHelpText": null,
+            "label": "Custom Metadata Record ID",
+            "length": 18,
+            "name": "Id",
+            "nillable": false,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": true,
+            "type": "id"
+          },
+          {
+            "aggregatable": false,
+            "custom": false,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": true,
+            "inlineHelpText": null,
+            "label": "Custom Metadata Record Name",
+            "length": 40,
+            "name": "DeveloperName",
+            "nillable": false,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": true,
+            "type": "string"
+          },
+          {
+            "aggregatable": false,
+            "custom": false,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": true,
+            "inlineHelpText": null,
+            "label": "Label",
+            "length": 40,
+            "name": "MasterLabel",
+            "nillable": false,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": true,
+            "type": "string"
+          },
+          {
+            "aggregatable": false,
+            "custom": false,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": true,
+            "inlineHelpText": null,
+            "label": "Master Language",
+            "length": 40,
+            "name": "Language",
+            "nillable": false,
+            "picklistValues": [
+              {
+                "active": true,
+                "label": "English",
+                "value": "en_US"
+              },
+              {
+                "active": true,
+                "label": "German",
+                "value": "de"
+              },
+              {
+                "active": true,
+                "label": "Spanish",
+                "value": "es"
+              },
+              {
+                "active": true,
+                "label": "French",
+                "value": "fr"
+              },
+              {
+                "active": true,
+                "label": "Italian",
+                "value": "it"
+              },
+              {
+                "active": true,
+                "label": "Japanese",
+                "value": "ja"
+              },
+              {
+                "active": true,
+                "label": "Swedish",
+                "value": "sv"
+              },
+              {
+                "active": true,
+                "label": "Korean",
+                "value": "ko"
+              },
+              {
+                "active": true,
+                "label": "Chinese (Traditional)",
+                "value": "zh_TW"
+              },
+              {
+                "active": true,
+                "label": "Chinese (Simplified)",
+                "value": "zh_CN"
+              },
+              {
+                "active": true,
+                "label": "Portuguese (Brazil)",
+                "value": "pt_BR"
+              },
+              {
+                "active": true,
+                "label": "Dutch",
+                "value": "nl_NL"
+              },
+              {
+                "active": true,
+                "label": "Danish",
+                "value": "da"
+              },
+              {
+                "active": true,
+                "label": "Thai",
+                "value": "th"
+              },
+              {
+                "active": true,
+                "label": "Finnish",
+                "value": "fi"
+              },
+              {
+                "active": true,
+                "label": "Russian",
+                "value": "ru"
+              },
+              {
+                "active": true,
+                "label": "Spanish (Mexico)",
+                "value": "es_MX"
+              },
+              {
+                "active": true,
+                "label": "Norwegian",
+                "value": "no"
+              }
+            ],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": true,
+            "type": "picklist"
+          },
+          {
+            "aggregatable": false,
+            "custom": false,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": true,
+            "inlineHelpText": null,
+            "label": "Namespace Prefix",
+            "length": 15,
+            "name": "NamespacePrefix",
+            "nillable": true,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": true,
+            "type": "string"
+          },
+          {
+            "aggregatable": false,
+            "custom": false,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": true,
+            "inlineHelpText": null,
+            "label": "Label",
+            "length": 40,
+            "name": "Label",
+            "nillable": true,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": true,
+            "type": "string"
+          },
+          {
+            "aggregatable": false,
+            "custom": false,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": true,
+            "inlineHelpText": null,
+            "label": "Qualified API Name",
+            "length": 70,
+            "name": "QualifiedApiName",
+            "nillable": true,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": true,
+            "type": "string"
+          },
+          {
+            "aggregatable": false,
+            "custom": false,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": false,
+            "inlineHelpText": null,
+            "label": "System Modstamp",
+            "length": 0,
+            "name": "SystemModstamp",
+            "nillable": false,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": true,
+            "type": "datetime"
+          },
+          {
+            "aggregatable": false,
+            "custom": true,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": true,
+            "inlineHelpText": null,
+            "label": "Country Code",
+            "length": 2,
+            "name": "Country_Code__c",
+            "nillable": true,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": true,
+            "type": "string"
+          },
+          {
+            "aggregatable": false,
+            "custom": true,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": true,
+            "inlineHelpText": null,
+            "label": "State Province",
+            "length": 50,
+            "name": "State_Province__c",
+            "nillable": true,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": true,
+            "type": "string"
+          },
+          {
+            "aggregatable": false,
+            "custom": true,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": false,
+            "inlineHelpText": null,
+            "label": "Tax Percentage",
+            "length": 0,
+            "name": "Tax_Percentage__c",
+            "nillable": true,
+            "picklistValues": [],
+            "precision": 8,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 3,
+            "sortable": true,
+            "type": "percent"
+          }
+        ],
+        "childRelationships": [],
+        "orgId": "00DgL00000bcU6DUAU",
+        "observedAt": "2026-10-09T15:04:23.125Z",
+        "provenance": "rest-api"
+      },
+      {
+        "name": "Usage_Event__e",
+        "label": "Usage Event",
+        "custom": true,
+        "queryable": false,
+        "fields": [
+          {
+            "aggregatable": false,
+            "custom": false,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": false,
+            "groupable": false,
+            "inlineHelpText": null,
+            "label": "Replay ID",
+            "length": 1000,
+            "name": "ReplayId",
+            "nillable": true,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": false,
+            "type": "string"
+          },
+          {
+            "aggregatable": false,
+            "custom": false,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": false,
+            "groupable": false,
+            "inlineHelpText": null,
+            "label": "Created Date",
+            "length": 0,
+            "name": "CreatedDate",
+            "nillable": false,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": false,
+            "type": "datetime"
+          },
+          {
+            "aggregatable": false,
+            "custom": false,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": false,
+            "groupable": false,
+            "inlineHelpText": null,
+            "label": "Created By ID",
+            "length": 18,
+            "name": "CreatedById",
+            "nillable": false,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [
+              "User"
+            ],
+            "relationshipName": "CreatedBy",
+            "scale": 0,
+            "sortable": false,
+            "type": "reference"
+          },
+          {
+            "aggregatable": false,
+            "custom": false,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": false,
+            "groupable": false,
+            "inlineHelpText": null,
+            "label": "Event UUID",
+            "length": 36,
+            "name": "EventUuid",
+            "nillable": true,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": false,
+            "type": "string"
+          },
+          {
+            "aggregatable": false,
+            "custom": true,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": false,
+            "groupable": false,
+            "inlineHelpText": null,
+            "label": "Account Id",
+            "length": 18,
+            "name": "Account_Id__c",
+            "nillable": true,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": false,
+            "type": "string"
+          },
+          {
+            "aggregatable": false,
+            "custom": true,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": false,
+            "groupable": false,
+            "inlineHelpText": null,
+            "label": "Meter Type",
+            "length": 50,
+            "name": "Meter_Type__c",
+            "nillable": true,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": false,
+            "type": "string"
+          },
+          {
+            "aggregatable": false,
+            "custom": true,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": false,
+            "groupable": false,
+            "inlineHelpText": null,
+            "label": "Quantity",
+            "length": 0,
+            "name": "Quantity__c",
+            "nillable": true,
+            "picklistValues": [],
+            "precision": 18,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 1,
+            "sortable": false,
+            "type": "double"
+          },
+          {
+            "aggregatable": false,
+            "custom": true,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": false,
+            "groupable": false,
+            "inlineHelpText": null,
+            "label": "Idempotency Hash",
+            "length": 64,
+            "name": "Idempotency_Hash__c",
+            "nillable": true,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": false,
+            "type": "string"
+          }
+        ],
+        "childRelationships": [
+          {
+            "childSObject": "AsyncOperationEvent",
+            "field": "SourceEvent",
+            "relationshipName": null
+          }
+        ],
+        "orgId": "00DgL00000bcU6DUAU",
+        "observedAt": "2026-10-09T15:04:29.708Z",
+        "provenance": "rest-api"
+      },
+      {
+        "name": "Usage_Record__c",
+        "label": "Usage Record",
+        "custom": true,
+        "queryable": true,
+        "fields": [
+          {
+            "aggregatable": true,
+            "custom": false,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": true,
+            "inlineHelpText": null,
+            "label": "Record ID",
+            "length": 18,
+            "name": "Id",
+            "nillable": false,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": true,
+            "type": "id"
+          },
+          {
+            "aggregatable": true,
+            "custom": false,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": true,
+            "inlineHelpText": null,
+            "label": "Owner ID",
+            "length": 18,
+            "name": "OwnerId",
+            "nillable": false,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [
+              "Group",
+              "User"
+            ],
+            "relationshipName": "Owner",
+            "scale": 0,
+            "sortable": true,
+            "type": "reference"
+          },
+          {
+            "aggregatable": false,
+            "custom": false,
+            "defaultValue": false,
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": true,
+            "inlineHelpText": null,
+            "label": "Deleted",
+            "length": 0,
+            "name": "IsDeleted",
+            "nillable": false,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": true,
+            "type": "boolean"
+          },
+          {
+            "aggregatable": true,
+            "custom": false,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": false,
+            "inlineHelpText": null,
+            "label": "Usage Record Name",
+            "length": 80,
+            "name": "Name",
+            "nillable": false,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": true,
+            "type": "string"
+          },
+          {
+            "aggregatable": true,
+            "custom": false,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": false,
+            "inlineHelpText": null,
+            "label": "Created Date",
+            "length": 0,
+            "name": "CreatedDate",
+            "nillable": false,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": true,
+            "type": "datetime"
+          },
+          {
+            "aggregatable": true,
+            "custom": false,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": true,
+            "inlineHelpText": null,
+            "label": "Created By ID",
+            "length": 18,
+            "name": "CreatedById",
+            "nillable": false,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [
+              "User"
+            ],
+            "relationshipName": "CreatedBy",
+            "scale": 0,
+            "sortable": true,
+            "type": "reference"
+          },
+          {
+            "aggregatable": true,
+            "custom": false,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": false,
+            "inlineHelpText": null,
+            "label": "Last Modified Date",
+            "length": 0,
+            "name": "LastModifiedDate",
+            "nillable": false,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": true,
+            "type": "datetime"
+          },
+          {
+            "aggregatable": true,
+            "custom": false,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": true,
+            "inlineHelpText": null,
+            "label": "Last Modified By ID",
+            "length": 18,
+            "name": "LastModifiedById",
+            "nillable": false,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [
+              "User"
+            ],
+            "relationshipName": "LastModifiedBy",
+            "scale": 0,
+            "sortable": true,
+            "type": "reference"
+          },
+          {
+            "aggregatable": true,
+            "custom": false,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": false,
+            "inlineHelpText": null,
+            "label": "System Modstamp",
+            "length": 0,
+            "name": "SystemModstamp",
+            "nillable": false,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": true,
+            "type": "datetime"
+          },
+          {
+            "aggregatable": true,
+            "custom": false,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": true,
+            "inlineHelpText": null,
+            "label": "Last Activity Date",
+            "length": 0,
+            "name": "LastActivityDate",
+            "nillable": true,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": true,
+            "type": "date"
+          },
+          {
+            "aggregatable": true,
+            "custom": false,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": false,
+            "inlineHelpText": null,
+            "label": "Last Viewed Date",
+            "length": 0,
+            "name": "LastViewedDate",
+            "nillable": true,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": true,
+            "type": "datetime"
+          },
+          {
+            "aggregatable": true,
+            "custom": false,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": false,
+            "inlineHelpText": null,
+            "label": "Last Referenced Date",
+            "length": 0,
+            "name": "LastReferencedDate",
+            "nillable": true,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": true,
+            "type": "datetime"
+          },
+          {
+            "aggregatable": true,
+            "custom": true,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": true,
+            "inlineHelpText": null,
+            "label": "Account",
+            "length": 18,
+            "name": "Account__c",
+            "nillable": true,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [
+              "Account"
+            ],
+            "relationshipName": "Account__r",
+            "scale": 0,
+            "sortable": true,
+            "type": "reference"
+          },
+          {
+            "aggregatable": true,
+            "custom": true,
+            "defaultValue": "API_CALLS",
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": true,
+            "inlineHelpText": null,
+            "label": "Meter Type",
+            "length": 255,
+            "name": "Meter_Type__c",
+            "nillable": true,
+            "picklistValues": [
+              {
+                "active": true,
+                "label": "API_CALLS",
+                "value": "API_CALLS"
+              },
+              {
+                "active": true,
+                "label": "COMPUTE_HOURS",
+                "value": "COMPUTE_HOURS"
+              },
+              {
+                "active": true,
+                "label": "STORAGE_GB",
+                "value": "STORAGE_GB"
+              }
+            ],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": true,
+            "type": "picklist"
+          },
+          {
+            "aggregatable": true,
+            "custom": true,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": false,
+            "inlineHelpText": null,
+            "label": "Quantity",
+            "length": 0,
+            "name": "Quantity__c",
+            "nillable": true,
+            "picklistValues": [],
+            "precision": 18,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 1,
+            "sortable": true,
+            "type": "double"
+          },
+          {
+            "aggregatable": true,
+            "custom": true,
+            "defaultValue": "PENDING",
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": true,
+            "inlineHelpText": null,
+            "label": "Status",
+            "length": 255,
+            "name": "Status__c",
+            "nillable": true,
+            "picklistValues": [
+              {
+                "active": true,
+                "label": "PENDING",
+                "value": "PENDING"
+              },
+              {
+                "active": true,
+                "label": "RATED",
+                "value": "RATED"
+              },
+              {
+                "active": true,
+                "label": "FAILED",
+                "value": "FAILED"
+              }
+            ],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": true,
+            "type": "picklist"
+          },
+          {
+            "aggregatable": true,
+            "custom": true,
+            "defaultValue": null,
+            "extraTypeInfo": null,
+            "filterable": true,
+            "groupable": true,
+            "inlineHelpText": null,
+            "label": "Idempotency Hash",
+            "length": 64,
+            "name": "Idempotency_Hash__c",
+            "nillable": true,
+            "picklistValues": [],
+            "precision": 0,
+            "referenceTo": [],
+            "relationshipName": null,
+            "scale": 0,
+            "sortable": true,
+            "type": "string"
+          }
+        ],
+        "childRelationships": [
+          {
+            "childSObject": "AIInsightValue",
+            "field": "SobjectLookupValueId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "AIRecordInsight",
+            "field": "TargetId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "ActivityHistory",
+            "field": "WhatId",
+            "relationshipName": "ActivityHistories"
+          },
+          {
+            "childSObject": "AgentWork",
+            "field": "WorkItemId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "AgentWorkChangeEvent",
+            "field": "WorkItemId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "ApprovalSubmission",
+            "field": "RelatedRecordId",
+            "relationshipName": "ApprovalSubmissions"
+          },
+          {
+            "childSObject": "ApprovalWorkItem",
+            "field": "RelatedRecordId",
+            "relationshipName": "ApprovalWorkItems"
+          },
+          {
+            "childSObject": "AttachedContentDocument",
+            "field": "LinkedEntityId",
+            "relationshipName": "AttachedContentDocuments"
+          },
+          {
+            "childSObject": "Attachment",
+            "field": "ParentId",
+            "relationshipName": "Attachments"
+          },
+          {
+            "childSObject": "CollaborationGroupRecord",
+            "field": "RecordId",
+            "relationshipName": "RecordAssociatedGroups"
+          },
+          {
+            "childSObject": "CollaborationGroupRecordChangeEvent",
+            "field": "RecordId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "CombinedAttachment",
+            "field": "ParentId",
+            "relationshipName": "CombinedAttachments"
+          },
+          {
+            "childSObject": "ContactRequest",
+            "field": "WhatId",
+            "relationshipName": "ContactRequests"
+          },
+          {
+            "childSObject": "ContentDistribution",
+            "field": "RelatedRecordId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "ContentDocumentLink",
+            "field": "LinkedEntityId",
+            "relationshipName": "ContentDocumentLinks"
+          },
+          {
+            "childSObject": "ContentDocumentLinkChangeEvent",
+            "field": "LinkedEntityId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "ContentVersion",
+            "field": "FirstPublishLocationId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "ContentVersionChangeEvent",
+            "field": "FirstPublishLocationId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "DuplicateRecordItem",
+            "field": "RecordId",
+            "relationshipName": "DuplicateRecordItems"
+          },
+          {
+            "childSObject": "EmailMessage",
+            "field": "RelatedToId",
+            "relationshipName": "Emails"
+          },
+          {
+            "childSObject": "EmailMessageChangeEvent",
+            "field": "RelatedToId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "EntitySubscription",
+            "field": "ParentId",
+            "relationshipName": "FeedSubscriptionsForEntity"
+          },
+          {
+            "childSObject": "Event",
+            "field": "WhatId",
+            "relationshipName": "Events"
+          },
+          {
+            "childSObject": "EventChangeEvent",
+            "field": "WhatId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "EventRelationChangeEvent",
+            "field": "RelationId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "FeedComment",
+            "field": "ParentId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "FeedItem",
+            "field": "ParentId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "FinanceBalanceSnapshot",
+            "field": "LegalEntityId",
+            "relationshipName": "FinanceBalanceSnapshots"
+          },
+          {
+            "childSObject": "FinanceBalanceSnapshot",
+            "field": "ReferenceEntityId",
+            "relationshipName": "FinanceBalanceSnapshots"
+          },
+          {
+            "childSObject": "FinanceBalanceSnapshotChangeEvent",
+            "field": "LegalEntityId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "FinanceBalanceSnapshotChangeEvent",
+            "field": "ReferenceEntityId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "FinanceTransaction",
+            "field": "DestinationEntityId",
+            "relationshipName": "DestinationFinanceTransactions"
+          },
+          {
+            "childSObject": "FinanceTransaction",
+            "field": "LegalEntityId",
+            "relationshipName": "FinanceTransactions"
+          },
+          {
+            "childSObject": "FinanceTransaction",
+            "field": "ParentReferenceEntityId",
+            "relationshipName": "ParentFinanceTransactions"
+          },
+          {
+            "childSObject": "FinanceTransaction",
+            "field": "ReferenceEntityId",
+            "relationshipName": "FinanceTransactions"
+          },
+          {
+            "childSObject": "FinanceTransaction",
+            "field": "SourceEntityId",
+            "relationshipName": "SourceFinanceTransactions"
+          },
+          {
+            "childSObject": "FinanceTransactionChangeEvent",
+            "field": "DestinationEntityId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "FinanceTransactionChangeEvent",
+            "field": "LegalEntityId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "FinanceTransactionChangeEvent",
+            "field": "ParentReferenceEntityId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "FinanceTransactionChangeEvent",
+            "field": "ReferenceEntityId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "FinanceTransactionChangeEvent",
+            "field": "SourceEntityId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "FlowExecutionErrorEvent",
+            "field": "ContextRecordId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "FlowOrchestrationWorkItem",
+            "field": "RelatedRecordId",
+            "relationshipName": "FlowOrchestrationWorkItems"
+          },
+          {
+            "childSObject": "FlowRecordRelation",
+            "field": "RelatedRecordId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "InventoryItemReservation",
+            "field": "ItemReservationSourceId",
+            "relationshipName": "InventoryReservationSources"
+          },
+          {
+            "childSObject": "InventoryReservation",
+            "field": "ReservationSourceId",
+            "relationshipName": "InventoryReservations"
+          },
+          {
+            "childSObject": "Note",
+            "field": "ParentId",
+            "relationshipName": "Notes"
+          },
+          {
+            "childSObject": "NoteAndAttachment",
+            "field": "ParentId",
+            "relationshipName": "NotesAndAttachments"
+          },
+          {
+            "childSObject": "OpenActivity",
+            "field": "WhatId",
+            "relationshipName": "OpenActivities"
+          },
+          {
+            "childSObject": "OutgoingEmail",
+            "field": "RelatedToId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "PendingServiceRouting",
+            "field": "WorkItemId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "PendingServiceRoutingChangeEvent",
+            "field": "WorkItemId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "PendingServiceRoutingInteractionInfo",
+            "field": "PrimaryRecordId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "PendingServiceRoutingInteractionInfo",
+            "field": "TargetObjectId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "ProcessException",
+            "field": "AttachedToId",
+            "relationshipName": "ProcessExceptions"
+          },
+          {
+            "childSObject": "ProcessExceptionChangeEvent",
+            "field": "AttachedToId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "ProcessExceptionEvent",
+            "field": "AttachedToId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "ProcessInstance",
+            "field": "TargetObjectId",
+            "relationshipName": "ProcessInstances"
+          },
+          {
+            "childSObject": "ProcessInstanceChangeEvent",
+            "field": "TargetObjectId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "ProcessInstanceHistory",
+            "field": "TargetObjectId",
+            "relationshipName": "ProcessSteps"
+          },
+          {
+            "childSObject": "RecordAction",
+            "field": "RecordId",
+            "relationshipName": "RecordActions"
+          },
+          {
+            "childSObject": "RecordActionHistory",
+            "field": "ParentRecordId",
+            "relationshipName": "RecordActionHistories"
+          },
+          {
+            "childSObject": "Task",
+            "field": "WhatId",
+            "relationshipName": "Tasks"
+          },
+          {
+            "childSObject": "TaskChangeEvent",
+            "field": "WhatId",
+            "relationshipName": null
+          },
+          {
+            "childSObject": "TopicAssignment",
+            "field": "EntityId",
+            "relationshipName": "TopicAssignments"
+          },
+          {
+            "childSObject": "Usage_Record__History",
+            "field": "ParentId",
+            "relationshipName": "Histories"
+          },
+          {
+            "childSObject": "Usage_Record__Share",
+            "field": "ParentId",
+            "relationshipName": "Shares"
+          },
+          {
+            "childSObject": "UserDefinedLabelAssignment",
+            "field": "ItemId",
+            "relationshipName": "UserDefinedLabelAssignments"
+          },
+          {
+            "childSObject": "VoiceCall",
+            "field": "RelatedRecordId",
+            "relationshipName": "RelatedRecords"
+          },
+          {
+            "childSObject": "VoiceCallChangeEvent",
+            "field": "RelatedRecordId",
+            "relationshipName": null
+          }
+        ],
+        "orgId": "00DgL00000bcU6DUAU",
+        "observedAt": "2026-10-09T15:04:03.245Z",
+        "provenance": "rest-api"
+      }
+    ]
   },
   "tracking": [],
   "metadataTypes": [
@@ -2436,6 +3684,2581 @@
           "fileName": "classes/devedapp__PostInstallScriptTest.cls",
           "lastModifiedByName": "OrgFarm EPIC",
           "lastModifiedDate": "2026-08-18T09:09:08.000Z"
+        }
+      ]
+    },
+    {
+      "xmlName": "CustomField",
+      "observedAt": "2026-10-09T15:04:02.734Z",
+      "components": [
+        {
+          "fullName": "Account.Active__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Account.object",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T08:42:35.000Z"
+        },
+        {
+          "fullName": "Account.CustomerPriority__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Account.object",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T08:42:35.000Z"
+        },
+        {
+          "fullName": "Account.NumberofLocations__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Account.object",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T08:42:35.000Z"
+        },
+        {
+          "fullName": "Account.SLA__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Account.object",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T08:42:35.000Z"
+        },
+        {
+          "fullName": "Account.SLAExpirationDate__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Account.object",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T08:42:35.000Z"
+        },
+        {
+          "fullName": "Account.SLASerialNumber__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Account.object",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T08:42:35.000Z"
+        },
+        {
+          "fullName": "Account.UpsellOpportunity__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Account.object",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T08:42:35.000Z"
+        },
+        {
+          "fullName": "Case.EngineeringReqNumber__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Case.object",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T08:42:35.000Z"
+        },
+        {
+          "fullName": "Case.PotentialLiability__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Case.object",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T08:42:35.000Z"
+        },
+        {
+          "fullName": "Case.Product__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Case.object",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T08:42:35.000Z"
+        },
+        {
+          "fullName": "Case.SLAViolation__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Case.object",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T08:42:35.000Z"
+        },
+        {
+          "fullName": "Contact.Languages__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Contact.object",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T08:42:35.000Z"
+        },
+        {
+          "fullName": "Contact.Level__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Contact.object",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T08:42:35.000Z"
+        },
+        {
+          "fullName": "Goal.OrigGoalId__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Goal.object",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T08:42:35.000Z"
+        },
+        {
+          "fullName": "Lead.CurrentGenerators__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Lead.object",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T08:42:35.000Z"
+        },
+        {
+          "fullName": "Lead.NumberofLocations__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Lead.object",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T08:42:35.000Z"
+        },
+        {
+          "fullName": "Lead.Primary__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Lead.object",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T08:42:35.000Z"
+        },
+        {
+          "fullName": "Lead.ProductInterest__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Lead.object",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T08:42:35.000Z"
+        },
+        {
+          "fullName": "Lead.SICCode__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Lead.object",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T08:42:35.000Z"
+        },
+        {
+          "fullName": "Metric.OrigMetricId__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Metric.object",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T08:42:35.000Z"
+        },
+        {
+          "fullName": "Opportunity.CurrentGenerators__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Opportunity.object",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T08:42:35.000Z"
+        },
+        {
+          "fullName": "Opportunity.DeliveryInstallationStatus__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Opportunity.object",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T08:42:35.000Z"
+        },
+        {
+          "fullName": "Opportunity.MainCompetitors__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Opportunity.object",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T08:42:35.000Z"
+        },
+        {
+          "fullName": "Opportunity.OrderNumber__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Opportunity.object",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T08:42:35.000Z"
+        },
+        {
+          "fullName": "Opportunity.TrackingNumber__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Opportunity.object",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T08:42:35.000Z"
+        },
+        {
+          "fullName": "Tax_Rate_Rule__mdt.Country_Code__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Tax_Rate_Rule__mdt.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "2026-10-08T14:04:29.000Z"
+        },
+        {
+          "fullName": "Tax_Rate_Rule__mdt.State_Province__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Tax_Rate_Rule__mdt.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "2026-10-08T14:05:56.000Z"
+        },
+        {
+          "fullName": "Tax_Rate_Rule__mdt.Tax_Percentage__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Tax_Rate_Rule__mdt.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "2026-10-08T14:06:57.000Z"
+        },
+        {
+          "fullName": "Usage_Event__e.Account_Id__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Usage_Event__e.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "2026-10-09T14:45:52.000Z"
+        },
+        {
+          "fullName": "Usage_Event__e.Idempotency_Hash__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Usage_Event__e.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "2026-10-09T14:47:39.000Z"
+        },
+        {
+          "fullName": "Usage_Event__e.Meter_Type__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Usage_Event__e.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "2026-10-09T14:46:30.000Z"
+        },
+        {
+          "fullName": "Usage_Event__e.Quantity__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Usage_Event__e.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "2026-10-09T14:47:07.000Z"
+        },
+        {
+          "fullName": "Usage_Record__c.Account__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Usage_Record__c.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "2026-10-09T14:52:01.000Z"
+        },
+        {
+          "fullName": "Usage_Record__c.Idempotency_Hash__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Usage_Record__c.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "2026-10-09T14:56:13.000Z"
+        },
+        {
+          "fullName": "Usage_Record__c.Meter_Type__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Usage_Record__c.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "2026-10-09T14:53:08.000Z"
+        },
+        {
+          "fullName": "Usage_Record__c.Quantity__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Usage_Record__c.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "2026-10-09T14:53:56.000Z"
+        },
+        {
+          "fullName": "Usage_Record__c.Status__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Usage_Record__c.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "2026-10-09T14:54:58.000Z"
+        }
+      ]
+    },
+    {
+      "xmlName": "CustomMetadata",
+      "observedAt": "2026-10-09T15:00:08.337Z",
+      "components": [
+        {
+          "fullName": "Tax_Rate_Rule.IN_DEFAULT",
+          "manageableState": "unmanaged",
+          "fileName": "customMetadata/Tax_Rate_Rule.IN_DEFAULT.md",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Tax_Rate_Rule.US_CA",
+          "manageableState": "unmanaged",
+          "fileName": "customMetadata/Tax_Rate_Rule.US_CA.md",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Tax_Rate_Rule.US_DEFAULT",
+          "manageableState": "unmanaged",
+          "fileName": "customMetadata/Tax_Rate_Rule.US_DEFAULT.md",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "xmlName": "CustomObject",
+      "observedAt": "2026-10-09T15:02:00.959Z",
+      "components": [
+        {
+          "fullName": "Account",
+          "fileName": "objects/Account.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AccountCleanInfo",
+          "fileName": "objects/AccountCleanInfo.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AccountContactRole",
+          "fileName": "objects/AccountContactRole.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ActivationTarget",
+          "fileName": "objects/ActivationTarget.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ActivationTargetPlatform",
+          "fileName": "objects/ActivationTargetPlatform.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Activity",
+          "fileName": "objects/Activity.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ActvTgtPlatformFieldValue",
+          "fileName": "objects/ActvTgtPlatformFieldValue.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Address",
+          "fileName": "objects/Address.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AgentWork",
+          "fileName": "objects/AgentWork.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AiEvalCopilotTestCaseRslt",
+          "fileName": "objects/AiEvalCopilotTestCaseRslt.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AiEvalPrmptRagTestCsRslt",
+          "fileName": "objects/AiEvalPrmptRagTestCsRslt.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AiEvalPromptTestCaseRslt",
+          "fileName": "objects/AiEvalPromptTestCaseRslt.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AiEvalTestCaseCritRslt",
+          "fileName": "objects/AiEvalTestCaseCritRslt.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AiEvalTestCaseResult",
+          "fileName": "objects/AiEvalTestCaseResult.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AiEvaluation",
+          "fileName": "objects/AiEvaluation.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AiGroundingFileRef",
+          "fileName": "objects/AiGroundingFileRef.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AiGroundingSourceStage",
+          "fileName": "objects/AiGroundingSourceStage.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AiGroundingWebRef",
+          "fileName": "objects/AiGroundingWebRef.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AiJobRun",
+          "fileName": "objects/AiJobRun.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AiJobRunItem",
+          "fileName": "objects/AiJobRunItem.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AITestSuiteRunJob",
+          "fileName": "objects/AITestSuiteRunJob.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AITestSuiteWorkbookAssoc",
+          "fileName": "objects/AITestSuiteWorkbookAssoc.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AIWorkbook",
+          "fileName": "objects/AIWorkbook.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AIWorksheet",
+          "fileName": "objects/AIWorksheet.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AIWorksheetCell",
+          "fileName": "objects/AIWorksheetCell.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AIWorksheetColRelation",
+          "fileName": "objects/AIWorksheetColRelation.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AIWorksheetColumn",
+          "fileName": "objects/AIWorksheetColumn.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AIWorksheetRow",
+          "fileName": "objects/AIWorksheetRow.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AlternativePaymentMethod",
+          "fileName": "objects/AlternativePaymentMethod.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AnalyticsUserAttrFuncTkn",
+          "fileName": "objects/AnalyticsUserAttrFuncTkn.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AppointmentCategory",
+          "fileName": "objects/AppointmentCategory.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AppointmentInvitation",
+          "fileName": "objects/AppointmentInvitation.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AppointmentInvitee",
+          "fileName": "objects/AppointmentInvitee.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AppointmentScheduleLog",
+          "fileName": "objects/AppointmentScheduleLog.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AppointmentTopicTimeSlot",
+          "fileName": "objects/AppointmentTopicTimeSlot.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ApprovalSubmission",
+          "fileName": "objects/ApprovalSubmission.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ApprovalSubmissionDetail",
+          "fileName": "objects/ApprovalSubmissionDetail.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ApprovalWorkItem",
+          "fileName": "objects/ApprovalWorkItem.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Asset",
+          "fileName": "objects/Asset.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AssetAction",
+          "fileName": "objects/AssetAction.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AssetActionSource",
+          "fileName": "objects/AssetActionSource.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AssetRelationship",
+          "fileName": "objects/AssetRelationship.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AssetStatePeriod",
+          "fileName": "objects/AssetStatePeriod.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AssignedResource",
+          "fileName": "objects/AssignedResource.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AssistantProgress",
+          "fileName": "objects/AssistantProgress.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AssociatedLocation",
+          "fileName": "objects/AssociatedLocation.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AuthorizationForm",
+          "fileName": "objects/AuthorizationForm.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AuthorizationFormConsent",
+          "fileName": "objects/AuthorizationFormConsent.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AuthorizationFormDataUse",
+          "fileName": "objects/AuthorizationFormDataUse.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "AuthorizationFormText",
+          "fileName": "objects/AuthorizationFormText.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "BusinessBrand",
+          "fileName": "objects/BusinessBrand.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "BuyerGroup",
+          "fileName": "objects/BuyerGroup.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Campaign",
+          "fileName": "objects/Campaign.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "CampaignMember",
+          "fileName": "objects/CampaignMember.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "CardPaymentMethod",
+          "fileName": "objects/CardPaymentMethod.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "CartCheckoutSession",
+          "fileName": "objects/CartCheckoutSession.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "CartDeliveryGroup",
+          "fileName": "objects/CartDeliveryGroup.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "CartDeliveryGroupMethod",
+          "fileName": "objects/CartDeliveryGroupMethod.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "CartItem",
+          "fileName": "objects/CartItem.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "CartItemPriceAdjustment",
+          "fileName": "objects/CartItemPriceAdjustment.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "CartRelatedItem",
+          "fileName": "objects/CartRelatedItem.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "CartTax",
+          "fileName": "objects/CartTax.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "CartValidationOutput",
+          "fileName": "objects/CartValidationOutput.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Case",
+          "fileName": "objects/Case.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "CaseContactRole",
+          "fileName": "objects/CaseContactRole.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "CaseMilestone",
+          "fileName": "objects/CaseMilestone.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "CaseRelatedIssue",
+          "fileName": "objects/CaseRelatedIssue.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ChangeRequest",
+          "fileName": "objects/ChangeRequest.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ChangeRequestRelatedIssue",
+          "fileName": "objects/ChangeRequestRelatedIssue.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ChangeRequestRelatedItem",
+          "fileName": "objects/ChangeRequestRelatedItem.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ChatterActivity",
+          "fileName": "objects/ChatterActivity.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "CollaborationGroup",
+          "fileName": "objects/CollaborationGroup.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "CollaborationGroupMember",
+          "fileName": "objects/CollaborationGroupMember.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "CommSubscription",
+          "fileName": "objects/CommSubscription.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "CommSubscriptionChannelType",
+          "fileName": "objects/CommSubscriptionChannelType.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "CommSubscriptionConsent",
+          "fileName": "objects/CommSubscriptionConsent.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "CommSubscriptionTiming",
+          "fileName": "objects/CommSubscriptionTiming.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ConsumptionRate",
+          "fileName": "objects/ConsumptionRate.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ConsumptionSchedule",
+          "fileName": "objects/ConsumptionSchedule.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Contact",
+          "fileName": "objects/Contact.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ContactCleanInfo",
+          "fileName": "objects/ContactCleanInfo.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ContactPointAddress",
+          "fileName": "objects/ContactPointAddress.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ContactPointConsent",
+          "fileName": "objects/ContactPointConsent.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ContactPointEmail",
+          "fileName": "objects/ContactPointEmail.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ContactPointPhone",
+          "fileName": "objects/ContactPointPhone.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ContactPointTypeConsent",
+          "fileName": "objects/ContactPointTypeConsent.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ContactRequest",
+          "fileName": "objects/ContactRequest.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ContentDocument",
+          "fileName": "objects/ContentDocument.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ContentVersion",
+          "fileName": "objects/ContentVersion.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Contract",
+          "fileName": "objects/Contract.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ContractContactRole",
+          "fileName": "objects/ContractContactRole.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ContractLineItem",
+          "fileName": "objects/ContractLineItem.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ConvEntryRelatedRecordCopy",
+          "fileName": "objects/ConvEntryRelatedRecordCopy.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ConversationApiLog",
+          "fileName": "objects/ConversationApiLog.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ConversationApiLogObjSum",
+          "fileName": "objects/ConversationApiLogObjSum.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ConversationEntryCopy",
+          "fileName": "objects/ConversationEntryCopy.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Coupon",
+          "fileName": "objects/Coupon.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "CouponCodeRedemption",
+          "fileName": "objects/CouponCodeRedemption.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "CreditMemo",
+          "fileName": "objects/CreditMemo.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "CreditMemoInvApplication",
+          "fileName": "objects/CreditMemoInvApplication.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "CreditMemoLine",
+          "fileName": "objects/CreditMemoLine.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Customer",
+          "fileName": "objects/Customer.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DandBCompany",
+          "fileName": "objects/DandBCompany.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataAction",
+          "fileName": "objects/DataAction.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataActionJobSummary",
+          "fileName": "objects/DataActionJobSummary.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataActionTarget",
+          "fileName": "objects/DataActionTarget.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataCleanRoom",
+          "fileName": "objects/DataCleanRoom.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataCommCapActvTarget",
+          "fileName": "objects/DataCommCapActvTarget.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataCommunicationCap",
+          "fileName": "objects/DataCommunicationCap.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataGraph",
+          "fileName": "objects/DataGraph.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataGuidance",
+          "fileName": "objects/DataGuidance.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataGuidanceStep",
+          "fileName": "objects/DataGuidanceStep.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataGuidanceStepGroup",
+          "fileName": "objects/DataGuidanceStepGroup.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataKitDeploymentLog",
+          "fileName": "objects/DataKitDeploymentLog.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataKnowledgeRsrchRpt",
+          "fileName": "objects/DataKnowledgeRsrchRpt.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataKnowledgeRsrchTmpl",
+          "fileName": "objects/DataKnowledgeRsrchTmpl.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataKnowledgeSpace",
+          "fileName": "objects/DataKnowledgeSpace.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataKnowledgeSpcJobRun",
+          "fileName": "objects/DataKnowledgeSpcJobRun.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataKnowledgeSrcFileRef",
+          "fileName": "objects/DataKnowledgeSrcFileRef.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataLakeObjectInstance",
+          "fileName": "objects/DataLakeObjectInstance.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataLineageDefSyncLog",
+          "fileName": "objects/DataLineageDefSyncLog.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataLineageNodeDefSyncLog",
+          "fileName": "objects/DataLineageNodeDefSyncLog.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataMaskCustomValueLibrary",
+          "fileName": "objects/DataMaskCustomValueLibrary.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataModelRelationConstraint",
+          "fileName": "objects/DataModelRelationConstraint.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataPackageKit",
+          "fileName": "objects/DataPackageKit.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataQueryWorkspace",
+          "fileName": "objects/DataQueryWorkspace.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataQueryWorkspaceTab",
+          "fileName": "objects/DataQueryWorkspaceTab.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataSourceBundle",
+          "fileName": "objects/DataSourceBundle.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataStream",
+          "fileName": "objects/DataStream.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataUseLegalBasis",
+          "fileName": "objects/DataUseLegalBasis.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DataUsePurpose",
+          "fileName": "objects/DataUsePurpose.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DeliveryEstimationSetup",
+          "fileName": "objects/DeliveryEstimationSetup.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsActivityLog",
+          "fileName": "objects/DevopsActivityLog.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsEnvDeployment",
+          "fileName": "objects/DevopsEnvDeployment.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsEnvDeploymentMbr",
+          "fileName": "objects/DevopsEnvDeploymentMbr.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsEnvironment",
+          "fileName": "objects/DevopsEnvironment.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsPipeline",
+          "fileName": "objects/DevopsPipeline.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsPipelineEnvironment",
+          "fileName": "objects/DevopsPipelineEnvironment.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsPipelineStage",
+          "fileName": "objects/DevopsPipelineStage.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsPipelineStageTrigger",
+          "fileName": "objects/DevopsPipelineStageTrigger.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsPipelineTestProvider",
+          "fileName": "objects/DevopsPipelineTestProvider.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsPipelnStgProm",
+          "fileName": "objects/DevopsPipelnStgProm.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsPipelnStgPromWkItem",
+          "fileName": "objects/DevopsPipelnStgPromWkItem.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsProject",
+          "fileName": "objects/DevopsProject.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsProjectEnvironment",
+          "fileName": "objects/DevopsProjectEnvironment.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsProjectPipeline",
+          "fileName": "objects/DevopsProjectPipeline.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsQualityGate",
+          "fileName": "objects/DevopsQualityGate.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsQualityGateResult",
+          "fileName": "objects/DevopsQualityGateResult.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsQualityGateRule",
+          "fileName": "objects/DevopsQualityGateRule.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsQualityGateRuleResult",
+          "fileName": "objects/DevopsQualityGateRuleResult.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsRequestInfo",
+          "fileName": "objects/DevopsRequestInfo.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsTest",
+          "fileName": "objects/DevopsTest.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsTestExecution",
+          "fileName": "objects/DevopsTestExecution.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsTestProviderSyncLog",
+          "fileName": "objects/DevopsTestProviderSyncLog.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsTestSuite",
+          "fileName": "objects/DevopsTestSuite.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsTestSuiteExecution",
+          "fileName": "objects/DevopsTestSuiteExecution.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsTestSuiteGroupExec",
+          "fileName": "objects/DevopsTestSuiteGroupExec.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsTestSuiteStage",
+          "fileName": "objects/DevopsTestSuiteStage.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsTestSuiteTest",
+          "fileName": "objects/DevopsTestSuiteTest.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DevopsWkItmTstSteGrpExec",
+          "fileName": "objects/DevopsWkItmTstSteGrpExec.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DigitalWallet",
+          "fileName": "objects/DigitalWallet.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DuplicateRecordItem",
+          "fileName": "objects/DuplicateRecordItem.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "DuplicateRecordSet",
+          "fileName": "objects/DuplicateRecordSet.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "EmailMessage",
+          "fileName": "objects/EmailMessage.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "EngagementChannelType",
+          "fileName": "objects/EngagementChannelType.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "EngagementChannelWorkType",
+          "fileName": "objects/EngagementChannelWorkType.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Entitlement",
+          "fileName": "objects/Entitlement.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "EntitlementContact",
+          "fileName": "objects/EntitlementContact.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "EntityMilestone",
+          "fileName": "objects/EntityMilestone.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Event",
+          "fileName": "objects/Event.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ExchangeUserMapping",
+          "fileName": "objects/ExchangeUserMapping.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ExpressionFilter",
+          "fileName": "objects/ExpressionFilter.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ExpressionFilterCriteria",
+          "fileName": "objects/ExpressionFilterCriteria.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ExtDataShare",
+          "fileName": "objects/ExtDataShare.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ExtDataShareTarget",
+          "fileName": "objects/ExtDataShareTarget.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ExternalEventMapping",
+          "fileName": "objects/ExternalEventMapping.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ExtlRecShrStagedRecord",
+          "fileName": "objects/ExtlRecShrStagedRecord.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "FeedItem",
+          "fileName": "objects/FeedItem.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "FinanceBalanceSnapshot",
+          "fileName": "objects/FinanceBalanceSnapshot.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "FinanceTransaction",
+          "fileName": "objects/FinanceTransaction.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "FlowOrchestrationInstance",
+          "fileName": "objects/FlowOrchestrationInstance.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "FlowOrchestrationLog",
+          "fileName": "objects/FlowOrchestrationLog.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "FlowOrchestrationStageInstance",
+          "fileName": "objects/FlowOrchestrationStageInstance.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "FlowOrchestrationStepInstance",
+          "fileName": "objects/FlowOrchestrationStepInstance.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "FlowOrchestrationVersion",
+          "fileName": "objects/FlowOrchestrationVersion.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "FlowOrchestrationWorkItem",
+          "fileName": "objects/FlowOrchestrationWorkItem.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "FulfillmentOrder",
+          "fileName": "objects/FulfillmentOrder.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "FulfillmentOrderItemAdjustment",
+          "fileName": "objects/FulfillmentOrderItemAdjustment.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "FulfillmentOrderItemTax",
+          "fileName": "objects/FulfillmentOrderItemTax.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "FulfillmentOrderLineItem",
+          "fileName": "objects/FulfillmentOrderLineItem.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "GisPrvdCnctrJobObjRun",
+          "fileName": "objects/GisPrvdCnctrJobObjRun.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Idea",
+          "fileName": "objects/Idea.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "IdentityResolution",
+          "fileName": "objects/IdentityResolution.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Image",
+          "fileName": "objects/Image.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Incident",
+          "fileName": "objects/Incident.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "IncidentRelatedItem",
+          "fileName": "objects/IncidentRelatedItem.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Individual",
+          "fileName": "objects/Individual.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "InventoryItemReservation",
+          "fileName": "objects/InventoryItemReservation.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "InventoryReservation",
+          "fileName": "objects/InventoryReservation.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Invoice",
+          "fileName": "objects/Invoice.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "InvoiceLine",
+          "fileName": "objects/InvoiceLine.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Lead",
+          "fileName": "objects/Lead.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "LeadCleanInfo",
+          "fileName": "objects/LeadCleanInfo.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "LegalEntity",
+          "fileName": "objects/LegalEntity.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Location",
+          "fileName": "objects/Location.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "LocationGroup",
+          "fileName": "objects/LocationGroup.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "LocationGroupAssignment",
+          "fileName": "objects/LocationGroupAssignment.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "LocationShippingCarrierMethod",
+          "fileName": "objects/LocationShippingCarrierMethod.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Macro",
+          "fileName": "objects/Macro.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "MacroAction",
+          "fileName": "objects/MacroAction.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "MacroInstruction",
+          "fileName": "objects/MacroInstruction.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "MacroUsage",
+          "fileName": "objects/MacroUsage.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "MarketSegment",
+          "fileName": "objects/MarketSegment.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "MarketSegmentActivation",
+          "fileName": "objects/MarketSegmentActivation.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "MarketSegmentField",
+          "fileName": "objects/MarketSegmentField.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "MessagingEndUser",
+          "fileName": "objects/MessagingEndUser.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "MessagingSession",
+          "fileName": "objects/MessagingSession.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "MktCalculatedInsight",
+          "fileName": "objects/MktCalculatedInsight.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "MktDataTransform",
+          "fileName": "objects/MktDataTransform.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "MktMLModel",
+          "fileName": "objects/MktMLModel.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "MktMLModelPartitionRun",
+          "fileName": "objects/MktMLModelPartitionRun.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "MktMLPredictionJob",
+          "fileName": "objects/MktMLPredictionJob.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "MLModel",
+          "fileName": "objects/MLModel.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "MLModelFactor",
+          "fileName": "objects/MLModelFactor.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "MLModelFactorComponent",
+          "fileName": "objects/MLModelFactorComponent.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "OperatingHours",
+          "fileName": "objects/OperatingHours.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "OperatingHoursHoliday",
+          "fileName": "objects/OperatingHoursHoliday.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Opportunity",
+          "fileName": "objects/Opportunity.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "OpportunityCompetitor",
+          "fileName": "objects/OpportunityCompetitor.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "OpportunityContactRole",
+          "fileName": "objects/OpportunityContactRole.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "OpportunityLineItem",
+          "fileName": "objects/OpportunityLineItem.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "OpportunityRelatedDeleteLog",
+          "fileName": "objects/OpportunityRelatedDeleteLog.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Order",
+          "fileName": "objects/Order.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "OrderItem",
+          "fileName": "objects/OrderItem.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "OrgMetricScanResult",
+          "fileName": "objects/OrgMetricScanResult.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "OrgMetricScanSummary",
+          "fileName": "objects/OrgMetricScanSummary.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "PartnerRole",
+          "fileName": "objects/PartnerRole.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "PartyConsent",
+          "fileName": "objects/PartyConsent.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Payment",
+          "fileName": "objects/Payment.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "PaymentAuthAdjustment",
+          "fileName": "objects/PaymentAuthAdjustment.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "PaymentAuthorization",
+          "fileName": "objects/PaymentAuthorization.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "PaymentCredit",
+          "fileName": "objects/PaymentCredit.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "PaymentCreditLinePayment",
+          "fileName": "objects/PaymentCreditLinePayment.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "PaymentCreditTransaction",
+          "fileName": "objects/PaymentCreditTransaction.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "PaymentGateway",
+          "fileName": "objects/PaymentGateway.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "PaymentGroup",
+          "fileName": "objects/PaymentGroup.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "PaymentLineInvoice",
+          "fileName": "objects/PaymentLineInvoice.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "PaymentMethod",
+          "fileName": "objects/PaymentMethod.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "PendingServiceRouting",
+          "fileName": "objects/PendingServiceRouting.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Pricebook2",
+          "fileName": "objects/Pricebook2.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "PricebookEntry",
+          "fileName": "objects/PricebookEntry.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "PrivacyJobSession",
+          "fileName": "objects/PrivacyJobSession.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "PrivacyRTBFRequest",
+          "fileName": "objects/PrivacyRTBFRequest.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Problem",
+          "fileName": "objects/Problem.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ProblemIncident",
+          "fileName": "objects/ProblemIncident.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ProblemRelatedItem",
+          "fileName": "objects/ProblemRelatedItem.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ProcessException",
+          "fileName": "objects/ProcessException.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Product2",
+          "fileName": "objects/Product2.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ProductAttribute",
+          "fileName": "objects/ProductAttribute.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ProductAttributeSetProduct",
+          "fileName": "objects/ProductAttributeSetProduct.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ProductCatalog",
+          "fileName": "objects/ProductCatalog.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ProductCategory",
+          "fileName": "objects/ProductCategory.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ProductCategoryProduct",
+          "fileName": "objects/ProductCategoryProduct.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ProductConsumptionSchedule",
+          "fileName": "objects/ProductConsumptionSchedule.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Promotion",
+          "fileName": "objects/Promotion.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "PromotionLineItemRule",
+          "fileName": "objects/PromotionLineItemRule.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "PromotionMarketSegment",
+          "fileName": "objects/PromotionMarketSegment.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "PromotionQualifier",
+          "fileName": "objects/PromotionQualifier.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "PromotionSegment",
+          "fileName": "objects/PromotionSegment.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "PromotionSegmentBuyerGroup",
+          "fileName": "objects/PromotionSegmentBuyerGroup.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "PromotionSegmentSalesStore",
+          "fileName": "objects/PromotionSegmentSalesStore.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "PromotionTarget",
+          "fileName": "objects/PromotionTarget.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "PromotionTier",
+          "fileName": "objects/PromotionTier.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "PromptAction",
+          "fileName": "objects/PromptAction.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "PromptError",
+          "fileName": "objects/PromptError.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "QuickText",
+          "fileName": "objects/QuickText.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "QuickTextUsage",
+          "fileName": "objects/QuickTextUsage.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Recommendation",
+          "fileName": "objects/Recommendation.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "RecordAction",
+          "fileName": "objects/RecordAction.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "RecordMergeHistory",
+          "fileName": "objects/RecordMergeHistory.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Refund",
+          "fileName": "objects/Refund.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "RefundLinePayment",
+          "fileName": "objects/RefundLinePayment.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ReportAnomalyEventStore",
+          "fileName": "objects/ReportAnomalyEventStore.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ReportHierarchyObjectField",
+          "fileName": "objects/ReportHierarchyObjectField.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ResourceAbsence",
+          "fileName": "objects/ResourceAbsence.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ResourcePreference",
+          "fileName": "objects/ResourcePreference.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ReturnOrder",
+          "fileName": "objects/ReturnOrder.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ReturnOrderItemAdjustment",
+          "fileName": "objects/ReturnOrderItemAdjustment.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ReturnOrderItemTax",
+          "fileName": "objects/ReturnOrderItemTax.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ReturnOrderLineItem",
+          "fileName": "objects/ReturnOrderLineItem.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "SalesStore",
+          "fileName": "objects/SalesStore.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Scorecard",
+          "fileName": "objects/Scorecard.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ScorecardAssociation",
+          "fileName": "objects/ScorecardAssociation.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ScorecardMetric",
+          "fileName": "objects/ScorecardMetric.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "SearchRecentQuery",
+          "fileName": "objects/SearchRecentQuery.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "SecurityHealthCheckAlertRecipient",
+          "fileName": "objects/SecurityHealthCheckAlertRecipient.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "SecurityHealthCheckResult",
+          "fileName": "objects/SecurityHealthCheckResult.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Seller",
+          "fileName": "objects/Seller.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ServiceAppointment",
+          "fileName": "objects/ServiceAppointment.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ServiceAppointmentAttendee",
+          "fileName": "objects/ServiceAppointmentAttendee.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ServiceContract",
+          "fileName": "objects/ServiceContract.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ServiceResource",
+          "fileName": "objects/ServiceResource.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ServiceResourceSkill",
+          "fileName": "objects/ServiceResourceSkill.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ServiceTerritory",
+          "fileName": "objects/ServiceTerritory.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ServiceTerritoryMember",
+          "fileName": "objects/ServiceTerritoryMember.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ServiceTerritoryWorkType",
+          "fileName": "objects/ServiceTerritoryWorkType.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "SfdcPartnerSbscrOffer",
+          "fileName": "objects/SfdcPartnerSbscrOffer.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "SfdcPartnerSbscrOfferItem",
+          "fileName": "objects/SfdcPartnerSbscrOfferItem.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Shift",
+          "fileName": "objects/Shift.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ShiftEngagementChannel",
+          "fileName": "objects/ShiftEngagementChannel.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ShiftWorkTopic",
+          "fileName": "objects/ShiftWorkTopic.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Shipment",
+          "fileName": "objects/Shipment.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ShipmentItem",
+          "fileName": "objects/ShipmentItem.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ShippingCarrier",
+          "fileName": "objects/ShippingCarrier.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ShippingCarrierMethod",
+          "fileName": "objects/ShippingCarrierMethod.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ShippingConfigurationSet",
+          "fileName": "objects/ShippingConfigurationSet.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ShippingRateArea",
+          "fileName": "objects/ShippingRateArea.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "ShippingRateGroup",
+          "fileName": "objects/ShippingRateGroup.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Site",
+          "fileName": "objects/Site.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "SkillRequirement",
+          "fileName": "objects/SkillRequirement.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "SlackChannelRelatedRecord",
+          "fileName": "objects/SlackChannelRelatedRecord.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "SocialPersona",
+          "fileName": "objects/SocialPersona.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Solution",
+          "fileName": "objects/Solution.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "SourceCodeRepoProvider",
+          "fileName": "objects/SourceCodeRepoProvider.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "SourceCodeRepository",
+          "fileName": "objects/SourceCodeRepository.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "SourceCodeRepositoryBranch",
+          "fileName": "objects/SourceCodeRepositoryBranch.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "StandardShippingRate",
+          "fileName": "objects/StandardShippingRate.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "StreamActivityAccess",
+          "fileName": "objects/StreamActivityAccess.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "StreamingChannel",
+          "fileName": "objects/StreamingChannel.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "TableauHostMapping",
+          "fileName": "objects/TableauHostMapping.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Task",
+          "fileName": "objects/Task.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Tax_Rate_Rule__mdt",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Tax_Rate_Rule__mdt.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "2026-10-08T14:03:24.000Z"
+        },
+        {
+          "fullName": "TenantConsumptionAlert",
+          "fileName": "objects/TenantConsumptionAlert.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "TenantPvsnLicConsumption",
+          "fileName": "objects/TenantPvsnLicConsumption.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "TenantPvsnProdtLicMap",
+          "fileName": "objects/TenantPvsnProdtLicMap.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "TimeSlot",
+          "fileName": "objects/TimeSlot.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Topic",
+          "fileName": "objects/Topic.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "TopicAssignment",
+          "fileName": "objects/TopicAssignment.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "UnstructuredStorageSpace",
+          "fileName": "objects/UnstructuredStorageSpace.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "UnstructuredStorageSpaceLayer",
+          "fileName": "objects/UnstructuredStorageSpaceLayer.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Usage_Event__e",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Usage_Event__e.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "2026-10-09T14:45:03.000Z"
+        },
+        {
+          "fullName": "Usage_Record__c",
+          "manageableState": "unmanaged",
+          "fileName": "objects/Usage_Record__c.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "2026-10-09T14:49:45.000Z"
+        },
+        {
+          "fullName": "User",
+          "fileName": "objects/User.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "UserCapabilityPreference",
+          "fileName": "objects/UserCapabilityPreference.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "UserDevopsPreference",
+          "fileName": "objects/UserDevopsPreference.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "UserExternalCredential",
+          "fileName": "objects/UserExternalCredential.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "UserLocalWebServerIdentity",
+          "fileName": "objects/UserLocalWebServerIdentity.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "UserPrioritizedRecord",
+          "fileName": "objects/UserPrioritizedRecord.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "UserProvisioningRequest",
+          "fileName": "objects/UserProvisioningRequest.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "UserServicePresence",
+          "fileName": "objects/UserServicePresence.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "VoiceCall",
+          "fileName": "objects/VoiceCall.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "Waitlist",
+          "fileName": "objects/Waitlist.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WaitlistParticipant",
+          "fileName": "objects/WaitlistParticipant.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WaitlistServiceResource",
+          "fileName": "objects/WaitlistServiceResource.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WaitlistWorkType",
+          "fileName": "objects/WaitlistWorkType.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WebCart",
+          "fileName": "objects/WebCart.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WebCartActivityLog",
+          "fileName": "objects/WebCartActivityLog.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WebCartAdjustmentBasis",
+          "fileName": "objects/WebCartAdjustmentBasis.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WebCartAdjustmentGroup",
+          "fileName": "objects/WebCartAdjustmentGroup.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WebCartCollaborator",
+          "fileName": "objects/WebCartCollaborator.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WebCartCredit",
+          "fileName": "objects/WebCartCredit.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WebStore",
+          "fileName": "objects/WebStore.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WebStoreBuyerGroup",
+          "fileName": "objects/WebStoreBuyerGroup.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WebStoreCatalog",
+          "fileName": "objects/WebStoreCatalog.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WebStoreInventorySource",
+          "fileName": "objects/WebStoreInventorySource.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WorkflowSLAAction",
+          "fileName": "objects/WorkflowSLAAction.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WorkItem",
+          "fileName": "objects/WorkItem.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WorkItemComponent",
+          "fileName": "objects/WorkItemComponent.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WorkItemComponentList",
+          "fileName": "objects/WorkItemComponentList.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WorkOrder",
+          "fileName": "objects/WorkOrder.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WorkOrderLineItem",
+          "fileName": "objects/WorkOrderLineItem.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WorkPlan",
+          "fileName": "objects/WorkPlan.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WorkPlanTemplate",
+          "fileName": "objects/WorkPlanTemplate.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WorkPlanTemplateEntry",
+          "fileName": "objects/WorkPlanTemplateEntry.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WorkStep",
+          "fileName": "objects/WorkStep.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WorkStepTemplate",
+          "fileName": "objects/WorkStepTemplate.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WorkType",
+          "fileName": "objects/WorkType.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WorkTypeGroup",
+          "fileName": "objects/WorkTypeGroup.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
+        },
+        {
+          "fullName": "WorkTypeGroupMember",
+          "fileName": "objects/WorkTypeGroupMember.object",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "1970-01-01T00:00:00.000Z"
         }
       ]
     }

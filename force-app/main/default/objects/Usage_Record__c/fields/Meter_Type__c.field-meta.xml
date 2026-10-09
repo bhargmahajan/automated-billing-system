@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Meter_Type__c</fullName>
+    <label>Meter Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>API_CALLS</fullName>
+                <default>true</default>
+                <label>API_CALLS</label>
+            </value>
+            <value>
+                <fullName>COMPUTE_HOURS</fullName>
+                <default>false</default>
+                <label>COMPUTE_HOURS</label>
+            </value>
+            <value>
+                <fullName>STORAGE_GB</fullName>
+                <default>false</default>
+                <label>STORAGE_GB</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
