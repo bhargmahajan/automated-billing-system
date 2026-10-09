@@ -1,4 +1,5 @@
 # Salesforce & common ignores
+.sf
 .sfdx/
 node_modules/
 .vscode/
