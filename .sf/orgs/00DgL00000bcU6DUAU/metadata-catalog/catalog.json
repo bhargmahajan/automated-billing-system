@@ -1,9 +1,132 @@
 {
   "version": 2,
   "orgId": "00DgL00000bcU6DUAU",
-  "writtenAt": "2026-10-13T12:43:16.355Z",
-  "generation": 518,
-  "inventory": [],
+  "writtenAt": "2026-10-13T12:45:36.991Z",
+  "generation": 532,
+  "inventory": [
+    {
+      "xmlName": "CustomTab",
+      "observedAt": "2026-10-13T12:45:35.763Z",
+      "complete": true,
+      "components": [
+        {
+          "fullName": "Billing_Ledger_Entry__c",
+          "manageableState": "unmanaged",
+          "fileName": "tabs/Billing_Ledger_Entry__c.tab",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "2026-10-11T13:35:35.000Z"
+        },
+        {
+          "fullName": "devedapp__Get_Started_Agentforce",
+          "namespacePrefix": "devedapp",
+          "manageableState": "installed",
+          "fileName": "tabs/devedapp__Get_Started_Agentforce.tab",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T09:09:08.000Z"
+        },
+        {
+          "fullName": "devedapp__Get_Started_Data_Cloud",
+          "namespacePrefix": "devedapp",
+          "manageableState": "installed",
+          "fileName": "tabs/devedapp__Get_Started_Data_Cloud.tab",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T09:09:08.000Z"
+        },
+        {
+          "fullName": "devedapp__Get_Started_MuleSoft",
+          "namespacePrefix": "devedapp",
+          "manageableState": "installed",
+          "fileName": "tabs/devedapp__Get_Started_MuleSoft.tab",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T09:09:08.000Z"
+        },
+        {
+          "fullName": "devedapp__Get_Started_SFDX",
+          "namespacePrefix": "devedapp",
+          "manageableState": "installed",
+          "fileName": "tabs/devedapp__Get_Started_SFDX.tab",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T09:09:08.000Z"
+        },
+        {
+          "fullName": "devedapp__Welcome",
+          "namespacePrefix": "devedapp",
+          "manageableState": "installed",
+          "fileName": "tabs/devedapp__Welcome.tab",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T09:09:08.000Z"
+        },
+        {
+          "fullName": "Invoice__c",
+          "manageableState": "unmanaged",
+          "fileName": "tabs/Invoice__c.tab",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "2026-10-11T14:06:17.000Z"
+        },
+        {
+          "fullName": "Payment_Transaction__c",
+          "manageableState": "unmanaged",
+          "fileName": "tabs/Payment_Transaction__c.tab",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "2026-10-11T14:17:13.000Z"
+        },
+        {
+          "fullName": "Usage_Record__c",
+          "manageableState": "unmanaged",
+          "fileName": "tabs/Usage_Record__c.tab",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "2026-10-09T14:50:48.000Z"
+        }
+      ],
+      "folders": []
+    },
+    {
+      "xmlName": "PermissionSet",
+      "observedAt": "2026-10-13T12:45:36.724Z",
+      "complete": true,
+      "components": [
+        {
+          "fullName": "devedapp__Developer_Edition",
+          "namespacePrefix": "devedapp",
+          "manageableState": "installed",
+          "fileName": "permissionsets/devedapp__Developer_Edition.permissionset",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T09:09:09.000Z"
+        },
+        {
+          "fullName": "Experience_Profile_Manager",
+          "manageableState": "unmanaged",
+          "fileName": "permissionsets/Experience_Profile_Manager.permissionset",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T08:42:35.000Z"
+        },
+        {
+          "fullName": "SaaS_Billing_Ops_Admin",
+          "manageableState": "unmanaged",
+          "fileName": "permissionsets/SaaS_Billing_Ops_Admin.permissionset",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "2026-10-13T12:17:55.000Z"
+        },
+        {
+          "fullName": "sfdcInternalInt__sfdc_platformmetabolism_slagent",
+          "namespacePrefix": "sfdcInternalInt",
+          "manageableState": "unmanaged",
+          "fileName": "permissionsets/sfdcInternalInt__sfdc_platformmetabolism_slagent.permissionset",
+          "lastModifiedByName": "Automated Process",
+          "lastModifiedDate": "2026-10-10T10:29:39.000Z"
+        },
+        {
+          "fullName": "sfdcInternalInt__sfdc_scrt2",
+          "namespacePrefix": "sfdcInternalInt",
+          "manageableState": "unmanaged",
+          "fileName": "permissionsets/sfdcInternalInt__sfdc_scrt2.permissionset",
+          "lastModifiedByName": "Automated Process",
+          "lastModifiedDate": "2026-10-10T09:56:30.000Z"
+        }
+      ],
+      "folders": []
+    }
+  ],
   "sobjects": {
     "descriptions": [
       {
@@ -17783,6 +17906,80 @@
       ]
     },
     {
+      "xmlName": "CustomTab",
+      "observedAt": "2026-10-13T12:45:30.257Z",
+      "components": [
+        {
+          "fullName": "Billing_Ledger_Entry__c",
+          "manageableState": "unmanaged",
+          "fileName": "tabs/Billing_Ledger_Entry__c.tab",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "2026-10-11T13:35:35.000Z"
+        },
+        {
+          "fullName": "devedapp__Get_Started_Agentforce",
+          "namespacePrefix": "devedapp",
+          "manageableState": "installed",
+          "fileName": "tabs/devedapp__Get_Started_Agentforce.tab",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T09:09:08.000Z"
+        },
+        {
+          "fullName": "devedapp__Get_Started_Data_Cloud",
+          "namespacePrefix": "devedapp",
+          "manageableState": "installed",
+          "fileName": "tabs/devedapp__Get_Started_Data_Cloud.tab",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T09:09:08.000Z"
+        },
+        {
+          "fullName": "devedapp__Get_Started_MuleSoft",
+          "namespacePrefix": "devedapp",
+          "manageableState": "installed",
+          "fileName": "tabs/devedapp__Get_Started_MuleSoft.tab",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T09:09:08.000Z"
+        },
+        {
+          "fullName": "devedapp__Get_Started_SFDX",
+          "namespacePrefix": "devedapp",
+          "manageableState": "installed",
+          "fileName": "tabs/devedapp__Get_Started_SFDX.tab",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T09:09:08.000Z"
+        },
+        {
+          "fullName": "devedapp__Welcome",
+          "namespacePrefix": "devedapp",
+          "manageableState": "installed",
+          "fileName": "tabs/devedapp__Welcome.tab",
+          "lastModifiedByName": "OrgFarm EPIC",
+          "lastModifiedDate": "2026-08-18T09:09:08.000Z"
+        },
+        {
+          "fullName": "Invoice__c",
+          "manageableState": "unmanaged",
+          "fileName": "tabs/Invoice__c.tab",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "2026-10-11T14:06:17.000Z"
+        },
+        {
+          "fullName": "Payment_Transaction__c",
+          "manageableState": "unmanaged",
+          "fileName": "tabs/Payment_Transaction__c.tab",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "2026-10-11T14:17:13.000Z"
+        },
+        {
+          "fullName": "Usage_Record__c",
+          "manageableState": "unmanaged",
+          "fileName": "tabs/Usage_Record__c.tab",
+          "lastModifiedByName": "Bharg Mahajan",
+          "lastModifiedDate": "2026-10-09T14:50:48.000Z"
+        }
+      ]
+    },
+    {
       "xmlName": "ExternalCredential",
       "observedAt": "2026-10-12T14:57:10.766Z",
       "components": [
@@ -17810,7 +18007,7 @@
     },
     {
       "xmlName": "PermissionSet",
-      "observedAt": "2026-10-13T11:51:29.318Z",
+      "observedAt": "2026-10-13T12:45:21.490Z",
       "components": [
         {
           "fullName": "devedapp__Developer_Edition",
@@ -17832,7 +18029,7 @@
           "manageableState": "unmanaged",
           "fileName": "permissionsets/SaaS_Billing_Ops_Admin.permissionset",
           "lastModifiedByName": "Bharg Mahajan",
-          "lastModifiedDate": "2026-10-13T11:47:57.000Z"
+          "lastModifiedDate": "2026-10-13T12:17:55.000Z"
         },
         {
           "fullName": "sfdcInternalInt__sfdc_platformmetabolism_slagent",
