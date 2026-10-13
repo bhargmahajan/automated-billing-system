@@ -7,9 +7,11 @@ public class StripePaymentLinkDispatcher implements Queueable, Database.AllowsCa
 
     public void execute(QueueableContext context) {
         List<Invoice__c> invoices = [
-            SELECT Id, Total_Due__c 
+            SELECT Id, Total_Due__c, Payment_Link_Status__c
             FROM Invoice__c 
-            WHERE Id IN :invoiceIds AND Stripe_Payment_Link__c = NULL
+            WHERE Id IN :invoiceIds
+                AND Stripe_Payment_Link__c = NULL
+                AND Payment_Link_Status__c = 'GENERATING'
         ];
 
         List<Invoice__c> toUpdate = new List<Invoice__c>();
@@ -35,13 +37,34 @@ public class StripePaymentLinkDispatcher implements Queueable, Database.AllowsCa
                           '&line_items[0][price_data][product_data][name]=Invoice+' + inv.Id;
             req.setBody(body);
 
-            HttpResponse res = new Http().send(req);
-            if (res.getStatusCode() == 200 || res.getStatusCode() == 201) {
-                Map<String, Object> resp = (Map<String, Object>) JSON.deserializeUntyped(res.getBody());
-                inv.Stripe_Payment_Link__c = (String) resp.get('url');
-                inv.Stripe_Session_Id__c = (String) resp.get('id');
+            HttpResponse res;
+            try {
+                res = new Http().send(req);
+            } catch (CalloutException calloutError) {
+                inv.Payment_Link_Status__c = 'FAILED';
                 toUpdate.add(inv);
+                continue;
             }
+
+            if (res.getStatusCode() == 200 || res.getStatusCode() == 201) {
+                try {
+                    Map<String, Object> resp = (Map<String, Object>) JSON.deserializeUntyped(res.getBody());
+                    String paymentLink = (String) resp.get('url');
+                    String sessionId = (String) resp.get('id');
+                    if (String.isNotBlank(paymentLink) && String.isNotBlank(sessionId)) {
+                        inv.Stripe_Payment_Link__c = paymentLink;
+                        inv.Stripe_Session_Id__c = sessionId;
+                        inv.Payment_Link_Status__c = 'READY';
+                    } else {
+                        inv.Payment_Link_Status__c = 'FAILED';
+                    }
+                } catch (JSONException responseError) {
+                    inv.Payment_Link_Status__c = 'FAILED';
+                }
+            } else {
+                inv.Payment_Link_Status__c = 'FAILED';
+            }
+            toUpdate.add(inv);
         }
 
         if (!toUpdate.isEmpty()) update toUpdate;

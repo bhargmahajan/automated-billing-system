@@ -1,0 +1,104 @@
+<template>
+    <lightning-card title="Billing dashboard" icon-name="standard:dashboard">
+        <div class="dashboard">
+            <div class="toolbar">
+                <div>
+                    <p class="eyebrow">SAAS BILLING OPERATIONS</p>
+                    <h1>Billing at a glance</h1>
+                    <p class="subtitle">Monitor invoices, collections, and incoming usage.</p>
+                </div>
+                <lightning-button
+                    label="Refresh"
+                    icon-name="utility:refresh"
+                    onclick={handleRefresh}
+                    disabled={isLoading}>
+                </lightning-button>
+            </div>
+
+            <template if:true={errorMessage}>
+                <div class="error-banner" role="alert">{errorMessage}</div>
+            </template>
+
+            <template if:true={isLoading}>
+                <lightning-spinner alternative-text="Loading billing dashboard" size="medium"></lightning-spinner>
+            </template>
+
+            <template if:true={hasDashboard}>
+                <section class="metrics" aria-label="Billing summary">
+                    <article class="metric-card">
+                        <div class="metric-icon invoices-icon">
+                            <lightning-icon icon-name="standard:invoice" size="small"></lightning-icon>
+                        </div>
+                        <p class="metric-label">Total invoices</p>
+                        <p class="metric-value">{invoiceCount}</p>
+                        <p class="metric-footnote">{paidInvoiceCount} paid</p>
+                    </article>
+                    <article class="metric-card">
+                        <div class="metric-icon balance-icon">
+                            <lightning-icon icon-name="utility:money" size="small"></lightning-icon>
+                        </div>
+                        <p class="metric-label">Outstanding balance</p>
+                        <lightning-formatted-number
+                            class="metric-value"
+                            value={outstandingBalance}
+                            format-style="currency"
+                            currency-code="USD">
+                        </lightning-formatted-number>
+                        <p class="metric-footnote">Posted and overdue</p>
+                    </article>
+                    <article class="metric-card">
+                        <div class="metric-icon payments-icon">
+                            <lightning-icon icon-name="utility:success" size="small"></lightning-icon>
+                        </div>
+                        <p class="metric-label">Payments received</p>
+                        <lightning-formatted-number
+                            class="metric-value"
+                            value={paymentsReceived}
+                            format-style="currency"
+                            currency-code="USD">
+                        </lightning-formatted-number>
+                        <p class="metric-footnote">Successful transactions</p>
+                    </article>
+                    <article class="metric-card">
+                        <div class="metric-icon usage-icon">
+                            <lightning-icon icon-name="utility:activity" size="small"></lightning-icon>
+                        </div>
+                        <p class="metric-label">Pending usage</p>
+                        <p class="metric-value">{pendingUsageCount}</p>
+                        <p class="metric-footnote">
+                            <lightning-formatted-number value={pendingUsageQuantity}></lightning-formatted-number>
+                            units awaiting rating
+                        </p>
+                    </article>
+                </section>
+
+                <section class="invoices-panel" aria-label="Recent invoices">
+                    <div class="panel-heading">
+                        <div>
+                            <h2>Recent invoices</h2>
+                            <p>Generate a unique Stripe payment link for eligible invoices.</p>
+                        </div>
+                        <span class="record-count">{invoiceRows.length} shown</span>
+                    </div>
+                    <lightning-datatable
+                        key-field="id"
+                        data={invoiceRows}
+                        columns={columns}
+                        onrowaction={handleRowAction}
+                        hide-checkbox-column
+                        show-row-number-column>
+                    </lightning-datatable>
+                    <template if:true={hasMoreInvoices}>
+                        <p class="table-footnote">Showing the 200 most recently created invoices.</p>
+                    </template>
+                    <template if:false={invoiceRows.length}>
+                        <div class="empty-state">
+                            <lightning-icon icon-name="utility:info" size="small"></lightning-icon>
+                            <p>No invoices are available yet.</p>
+                        </div>
+                    </template>
+                </section>
+            </template>
+        </div>
+    </lightning-card>
+</template>

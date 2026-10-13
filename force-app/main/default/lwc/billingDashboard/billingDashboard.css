@@ -1,0 +1,190 @@
+:host {
+    display: block;
+}
+
+.dashboard {
+    padding: 1.25rem;
+}
+
+.toolbar,
+.panel-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.toolbar {
+    margin-bottom: 1.25rem;
+}
+
+.eyebrow {
+    margin: 0 0 0.25rem;
+    color: #566573;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+}
+
+h1,
+h2,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 0.25rem;
+    color: #152536;
+    font-size: 1.55rem;
+    font-weight: 700;
+}
+
+.subtitle,
+.panel-heading p {
+    margin-bottom: 0;
+    color: #647587;
+}
+
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.metric-card,
+.invoices-panel {
+    border: 1px solid #e5eaf0;
+    border-radius: 0.75rem;
+    background: #fff;
+    box-shadow: 0 2px 8px rgb(20 39 61 / 5%);
+}
+
+.metric-card {
+    min-height: 10rem;
+    padding: 1rem 1.1rem;
+}
+
+.metric-icon {
+    display: grid;
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-bottom: 0.9rem;
+    place-items: center;
+    border-radius: 0.65rem;
+}
+
+.invoices-icon {
+    background: #edf4ff;
+}
+
+.balance-icon {
+    background: #fff4e8;
+}
+
+.payments-icon {
+    background: #e9f8f1;
+}
+
+.usage-icon {
+    background: #f2edff;
+}
+
+.metric-label {
+    margin-bottom: 0.2rem;
+    color: #647587;
+    font-size: 0.85rem;
+}
+
+.metric-value {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: #142536;
+    font-size: 1.65rem;
+    font-weight: 700;
+}
+
+.metric-footnote {
+    margin-bottom: 0;
+    color: #768696;
+    font-size: 0.75rem;
+}
+
+.invoices-panel {
+    overflow: hidden;
+}
+
+.panel-heading {
+    padding: 1rem 1.1rem;
+}
+
+h2 {
+    margin-bottom: 0.25rem;
+    color: #152536;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.panel-heading p,
+.table-footnote {
+    color: #647587;
+    font-size: 0.8rem;
+}
+
+.record-count {
+    flex: 0 0 auto;
+    padding: 0.3rem 0.65rem;
+    border-radius: 1rem;
+    background: #f1f4f7;
+    color: #526475;
+    font-size: 0.75rem;
+}
+
+.table-footnote {
+    margin: 0;
+    padding: 0.75rem 1rem;
+    text-align: right;
+}
+
+.empty-state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 2rem;
+    color: #647587;
+}
+
+.empty-state p {
+    margin: 0;
+}
+
+.error-banner {
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #f3b7b7;
+    border-radius: 0.5rem;
+    background: #fff4f4;
+    color: #8e2020;
+}
+
+@media (max-width: 900px) {
+    .metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .dashboard {
+        padding: 0.75rem;
+    }
+
+    .toolbar,
+    .panel-heading {
+        align-items: flex-start;
+    }
+
+    .metrics {
+        grid-template-columns: 1fr;
+    }
+}

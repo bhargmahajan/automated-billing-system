@@ -66,7 +66,8 @@ public with sharing class AutomatedInvoicingBatch implements Database.Batchable<
                 Status__c = 'POSTED',
                 Subtotal__c = sub,
                 Loyalty_Discount__c = disc,
-                Tax_Amount__c = tax
+                Tax_Amount__c = tax,
+                Payment_Link_Status__c = 'GENERATING'
             ));
 
             if (pointsToBurn.get(accId) > 0) {
