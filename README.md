@@ -41,14 +41,6 @@ force-app/main/default/
 4. The rating batch starts `AutomatedInvoicingBatch`, which creates invoices, applies available points and configured tax rates, and queues Stripe payment-link generation.
 5. Stripe sends a signed `checkout.session.completed` event to the webhook endpoint. The handler marks the invoice paid and records the payment transaction and ledger remittance.
 
-The tiered pricing strategy currently supports:
-
-| Meter | Pricing |
-| --- | --- |
-| `API_CALLS` | First 10,000 are free; next 90,000 at $0.001 each; additional calls at $0.0005 each |
-| `STORAGE_GB` | $0.05 per unit |
-| `COMPUTE_HOURS` | $0.15 per unit |
-
 Tax rates are supplied as `Tax_Rate_Rule__mdt` custom metadata. The repository includes default US, California, and India rules.
 
 ## Prerequisites
